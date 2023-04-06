@@ -1,0 +1,118 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 4
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 4</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Tab 4 page"></app-explore-container> -->
+
+  <div class="padding">
+
+    <br>
+
+    <ion-item lines="none" [routerLink]="['myinfo']">
+      
+      <div slot="start">
+        <div class="profile-pic" [ngStyle]="{'background-image':'url(./assets/perfil.jpg)'}">
+          
+        </div>
+      </div>
+
+      <div>
+        <h4>Cristina Alonso <br> <small>debbie.baker@example.com</small></h4>
+      </div>
+
+    </ion-item>
+
+    <br>
+    
+
+    <ion-list>
+      
+      <ion-item [routerLink]="['/dogs']" lines="none" style="padding: 8px 0;">
+        <div slot="start">
+          <img src="assets/profile/dueño.svg" alt="" style="width: 30px;">
+        </div>
+
+        <div>
+          <b>Mis perros</b>
+        </div>
+      </ion-item>
+
+      <ion-item lines="none" style="padding: 8px 0;">
+        <div slot="start">
+          <img src="assets/profile/payment.svg" alt="" style="width: 30px;">
+        </div>
+
+        <div>
+          <b>Datos bancarios</b>
+        </div>
+      </ion-item>
+
+      <ion-item [routerLink]="['/support']" lines="none" style="padding: 8px 0;">
+        <div slot="start">
+          <img src="assets/profile/support_agent.svg" alt="" style="width: 30px;">
+        </div>
+
+        <div>
+          <b>Soporte</b>
+        </div>
+      </ion-item>
+
+      <ion-item [routerLink]="['/notifications']" lines="none" style="padding: 8px 0;">
+        <div slot="start">
+          <img src="assets/profile/notifications_none.svg" alt="" style="width: 30px;">
+        </div>
+
+        <div>
+          <b>Notificaciones</b>
+        </div>
+      </ion-item>
+
+      <br>
+
+      <div class="line"></div>
+      <br>
+
+      <ion-item (click)="logout()" lines="none" style="padding: 8px 0;">
+        <div slot="start">
+          <img src="assets/profile/log-out.svg" alt="" style="width: 30px;">
+        </div>
+
+        <div class="color-pw">
+          <b>Cerrar sesión</b>
+        </div>
+      </ion-item>
+
+
+      <ion-item lines="none" style="padding: 8px 0;">
+        <div slot="start">
+          <img src="assets/profile/Corazonroto.svg" alt="" style="width: 30px;">
+        </div>
+
+        <div>
+          <b>Eliminar cuenta</b>
+        </div>
+      </ion-item>
+
+    </ion-list>
+
+
+    <br>
+    <br>
+
+    <button class="btn-pw1" routerLink="/tabs">Entrar como paseador</button>
+    <!-- <h5 class="color-pw wb" style="margin-bottom: 0;">Buscar paseadores</h5> -->
+
+  </div>
+</ion-content>

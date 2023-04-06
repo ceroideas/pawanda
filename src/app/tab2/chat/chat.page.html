@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">
+
+      <ion-icon name="arrow-back" (click)="nav.back()" style="position: absolute; top: 18px; left: 8px;"></ion-icon>
+      <b style="color: #000;">Cristina Alonso</b> <br> <small>Victo hace 3 min</small></ion-title>
+
+
+      <div slot="start" class="profile-pic" style="background-image: url(assets/chat/1.jpg); position: absolute; right: 8px; top: 8px;"></div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="padding" style="background-color: #fff; border: 1px solid silver;">
+    
+    <button style="margin-bottom: 0;" class="btn-pw1">Reservar paseo</button>
+
+  </div>
+
+  <div class="padding">
+    
+
+    <div class="left-bubble">
+      ¿Me envías alguna foto para conocerlo? :)
+    </div>
+
+    <div class="right-bubble">
+      Claro, ahora te envío
+    </div>
+
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  
+  <ion-item lines="none" style="padding: 8px 0;">
+    
+    <div slot="start" style="margin: 16px;">
+      <ion-icon style="font-size: 24px;" class="color-pw" name="link-outline"></ion-icon>
+    </div>
+
+    <div style="width: 100%">
+      <ion-input type="text"></ion-input>
+    </div>
+
+    <div slot="end" style="margin: 16px;">
+      <ion-icon style="font-size: 24px;" class="color-pw" name="send-outline"></ion-icon>
+    </div>
+
+  </ion-item>
+
+</ion-footer>

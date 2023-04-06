@@ -1,0 +1,89 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      create
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+
+  <div class="sendEmail" *ngIf="send == 1">
+
+    <div style="position: absolute; text-align: center; width: 100%; top: 30%;">
+
+      <div style="position: relative; left: 20px;">
+      <img src="assets/letter.svg" alt="" style="position: relative; top: -30px;">
+      <img src="assets/letter-dog.svg" alt="" style="position: relative;">
+      <img src="assets/letter-shadow.svg" alt="" style="position: relative; left: -115px; top: 10px;">
+      </div>
+
+      <br>
+      <br>
+
+      Hemos recibido tu mensaje, te <br> <br> responderemos lo antes posible.
+
+    </div>
+
+
+  </div>
+
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Tab 2 page"></app-explore-container> -->
+
+  <div class="padding">
+    
+    <h5 class="color-pw wb" style="margin-bottom: 0;" (click)="nav.back()">
+      <ion-icon name="arrow-back" style="position: relative; top: 2px;"></ion-icon>
+    Soporte</h5>
+
+
+    <br>
+    <br>
+
+    <form class="form" [formGroup]="validations_form" (ngSubmit)="enviarSoporte(validations_form.value)">
+
+
+      <ion-item class="ion-no-padding" lines="none">
+        <ion-label position="stacked"> <span class="control-label">Cuéntanos como podemos ayudarte</span> <br> <br> <br> </ion-label>
+        <ion-textarea rows="4" formControlName="message"></ion-textarea>
+      </ion-item>
+          <div class="validation-errors">
+                  <ng-container *ngFor="let validation of validation_messages.message">
+                    <div class="error-message" *ngIf="validations_form.get('message').hasError(validation.type) && (validations_form.get('message').dirty || validations_form.get('message').touched)">
+                      {{ validation.message }}
+                    </div>
+                  </ng-container>
+                </div>
+
+      <br>
+
+      <ion-item class="ion-no-padding" lines="none">
+          <ion-label position="stacked"> <span class="control-label">Danos un email al que responderte</span> <br> <br> <br> </ion-label>
+          <ion-input formControlName="email" type="text" ></ion-input>
+
+        </ion-item>
+          <div class="validation-errors">
+                  <ng-container *ngFor="let validation of validation_messages.email">
+                    <div class="error-message" *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+                      {{ validation.message }}
+                    </div>
+                  </ng-container>
+                </div>
+
+    </form>
+
+  </div>
+</ion-content>
+
+<ion-footer *ngIf="send != 1">
+  <div class="padding">
+  <button class="btn-pw1" (click)="enviar()">Enviar</button>
+  </div>
+
+</ion-footer>

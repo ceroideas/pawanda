@@ -1,0 +1,83 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Tab 2 page"></app-explore-container> -->
+
+  <div class="padding">
+    
+    <h5 class="color-pw wb" style="margin-bottom: 0;" (click)="nav.back()">
+      <ion-icon name="arrow-back" style="position: relative; top: 2px;"></ion-icon>
+    Mis perros</h5>
+
+
+    <br>
+    <br>
+
+    <ion-list>
+      
+      <ion-item style="padding: 8px 0;">
+      
+        <div slot="start">
+          <div class="dog-pic" [ngStyle]="{'background-image':'url(./assets/dog1.jpg)'}">
+            
+          </div>
+        </div>
+
+        <div>
+          <h4><small style="color: #000; font-weight: bolder;">Otto</small></h4>
+        </div>
+
+        <small slot="end">
+          <h4>
+            <ion-icon class="color-pw" style="margin-left: 12px;" name="pencil"></ion-icon>
+            <ion-icon class="color-pw" style="margin-left: 24px;" [routerLink]="['delete']" name="trash"></ion-icon>
+          </h4>
+        </small>
+
+      </ion-item>
+
+      <ion-item style="padding: 8px 0;">
+      
+        <div slot="start">
+          <div class="dog-pic" [ngStyle]="{'background-image':'url(./assets/dog2.jpg)'}">
+            
+          </div>
+        </div>
+
+        <div>
+          <h4><small style="color: #000; font-weight: bolder;">Gus</small></h4>
+        </div>
+
+        <small slot="end">
+          <h4>
+            <ion-icon class="color-pw" style="margin-left: 12px;" name="pencil"></ion-icon>
+            <ion-icon class="color-pw" style="margin-left: 24px;" [routerLink]="['delete']" name="trash"></ion-icon>
+          </h4>
+        </small>
+
+      </ion-item>
+
+    </ion-list>
+
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="padding">
+  <button class="btn-pw1" routerLink="create">Añadir otra mascota</button>
+  </div>
+
+</ion-footer>
