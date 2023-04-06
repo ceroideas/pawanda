@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Geolocation } from '@awesome-cordova-plugins/geolocation/ngx';
+import { NavController } from '@ionic/angular';
 
 declare var google:any;
 
@@ -22,7 +23,7 @@ export class MapPage implements OnInit {
 
   marker;
 
-  constructor(public geolocation: Geolocation) { }
+  constructor(public geolocation: Geolocation, public nav: NavController) { }
 
   ngOnInit() {
     this.geolocation.getCurrentPosition().then((resp) => {
@@ -113,7 +114,7 @@ export class MapPage implements OnInit {
 
   next()
   {
-
+    this.nav.navigateForward('tabs/tab1/date');
   }
 
 }

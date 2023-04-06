@@ -499,3 +499,26 @@ button:disabled {
   background-size: cover;
   background-position: center;
 }
+
+.days {
+  display: flex;
+  margin: 0 auto;
+}
+
+.days > * { flex: 1; }
+
+.day {
+  font-size: 18px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid silver;
+  margin-right: 8px;
+  &:last-of-type {
+    margin-right: 0px;
+  }
+}
+
+.daySelected {
+  background-color: rgba(64, 96, 96, 1);
+  color: #fff;
+}

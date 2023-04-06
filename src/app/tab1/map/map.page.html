@@ -8,7 +8,7 @@
 
   <div class="padding" style="position: absolute; top: 0; width: 100vw;">
     <ion-item class="ion-no-padding" lines="none">
-      <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
+      <ion-icon (click)="nav.back()" slot="start" name="arrow-back-outline"></ion-icon>
       <ion-input [(ngModel)]="address" type="text"></ion-input>
     </ion-item>
   </div>
