@@ -35,6 +35,18 @@ const routes: Routes = [
     path: 'notifications',
     loadChildren: () => import('./pages/notifications/notifications.module').then( m => m.NotificationsPageModule)
   },
+  {
+    path: 'cal-modal',
+    loadChildren: () => import('./pages/cal-modal/cal-modal.module').then( m => m.CalModalPageModule)
+  },
+  {
+    path: 'cal2-modal',
+    loadChildren: () => import('./pages/cal2-modal/cal2-modal.module').then( m => m.Cal2ModalPageModule)
+  },
+  {
+    path: 'walker-profile',
+    loadChildren: () => import('./pages/walker-profile/walker-profile.module').then( m => m.WalkerProfilePageModule)
+  },
 ];
 @NgModule({
   imports: [

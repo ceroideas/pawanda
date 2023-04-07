@@ -4,20 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DatePageRoutingModule } from './date-routing.module';
+import { ListPageRoutingModule } from './list-routing.module';
 
-import { DatePage } from './date.page';
-
-import { PipesModule } from '../../pipes/pipes.module';
+import { ListPage } from './list.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PipesModule,
-    DatePageRoutingModule
+    ListPageRoutingModule
   ],
-  declarations: [DatePage]
+  declarations: [ListPage]
 })
-export class DatePageModule {}
+export class ListPageModule {}

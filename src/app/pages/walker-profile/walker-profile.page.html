@@ -1,0 +1,111 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>changepassword</ion-title>
+  </ion-toolbar>
+</ion-header>
+ -->
+<ion-content>
+
+  <div class="padding">
+
+    <h5 class="color-pw wb" style="margin-bottom: 0;">
+      <ion-icon (click)="nav.back()" name="arrow-back" style="position: relative; top: 2px;"></ion-icon>
+      Perfil del paseador
+    </h5>
+
+    <br>
+
+    <ion-item lines="none">
+      
+      <div slot="start">
+        <div class="profile-pic" [ngStyle]="{'background-image':'url(./assets/chat/2.jpg)'}">
+          
+        </div>
+      </div>
+
+      <div>
+        <h4><span style="display: block; margin-bottom: 12px;"><b>Cristina Alonso</b></span>
+
+          <span style="position: relative; margin-right: 8px; top: 2px;">
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star-outline"></ion-icon>
+          </span> 
+
+          <small [routerLink]="['opinions']" class="color-pw link wb">23 Opiniones</small> <br>
+
+          <h4 style="margin-top: 0;"><img src="assets/money.svg" alt="" style="width: 30px; position: relative; top: 8px; margin-right: 4px;"> <b><small>10 €/hora</small></b></h4>
+
+          <h4 style="margin-top: 0;"><img src="assets/dog.svg" alt="" style="width: 25px; position: relative; top: 8px; margin-right: 4px;"> <b><small>Perros medianos (5-10 kg)</small></b></h4>
+
+          <h4 style="margin-top: 0;"><img src="assets/ppp.svg" alt="" style="width: 25px; position: relative; top: 8px; margin-right: 4px;"> <b><small>Permiso PPP</small></b></h4>
+
+          </h4>
+      </div>
+
+    </ion-item>
+
+
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-label position="stacked"> <span class="control-label">Fotos de paseos</span> <br> <br> <br> </ion-label>
+
+      <ion-row class="ion-no-margin" style="width: 100%;">
+        
+        <ion-col>
+          <div class="walk-pic" [ngStyle]="{'background-image': 'url(assets/walk/1.jpg)'}"></div>
+        </ion-col>
+        <ion-col>
+          <div class="walk-pic" [ngStyle]="{'background-image': 'url(assets/walk/2.jpg)'}"></div>
+        </ion-col>
+        <ion-col>
+          <div class="walk-pic" [ngStyle]="{'background-image': 'url(assets/walk/3.jpg)'}"></div>
+        </ion-col>
+        <ion-col>
+          <div class="walk-pic" [ngStyle]="{'background-image': 'url(assets/walk/1.jpg)'}"></div>
+        </ion-col>
+
+      </ion-row>
+
+    </ion-item>
+
+    <br>
+
+    <ion-row>
+      
+      <ion-col>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"> <span class="control-label">Envío de fotos</span> <br> <br> <br> </ion-label>
+
+          <div style="font-size: 18px;"><ion-icon style="color: gray" name="time-outline"></ion-icon>
+          <ion-icon style="color: orange" name="time-outline"></ion-icon>
+          <ion-icon style="color: gray" name="time-outline"></ion-icon></div>
+
+        </ion-item>
+        
+      </ion-col>
+
+      <ion-col>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"> <span class="control-label">Tiempo de respuesta</span> <br> <br> <br> </ion-label>
+
+          <div style="font-size: 18px;"><ion-icon style="color: lightgreen" name="time-outline"></ion-icon>
+          <ion-icon style="color: gray" name="time-outline"></ion-icon>
+          <ion-icon style="color: gray" name="time-outline"></ion-icon></div>
+        </ion-item>
+        
+      </ion-col>
+
+    </ion-row>
+
+    <br>
+
+    <button class="btn-pw1">Contactar con Cristina</button>
+    
+  </div>
+
+</ion-content>
+

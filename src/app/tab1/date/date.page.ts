@@ -1,5 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NavController, ModalController } from '@ionic/angular';
+
+import { CalendarModalOptions, DayConfig, CalendarResult } from 'ion2-calendar';
+
+import { CalModalPage } from '../../pages/cal-modal/cal-modal.page';
+import { Cal2ModalPage } from '../../pages/cal2-modal/cal2-modal.page';
+
+declare var moment: any;
 
 @Component({
   selector: 'app-date',
@@ -39,13 +46,41 @@ export class DatePage implements OnInit {
     "00:00",
   ];
 
-  constructor(public nav: NavController) { }
+  repeat = "0";
+
+  /**/
+
+  eventSource = [];
+  viewTitle: string;
+
+  calendar = {
+    mode: 'month',
+    currentDate: new Date(),
+  };
+
+  selectedDate: Date;
+  fechasNull = [];
+
+  dates = [];
+
+  repeat_to = "-1";
+  repeat_to_date;
+
+  // @ViewChild(CalendarComponent) myCal: CalendarComponent;
+
+  /**/
+
+  constructor(public nav: NavController, public modalCtrl: ModalController) { }
 
   ngOnInit() {
   }
 
   addDay(i)
   {
+    if (this.dates.length)
+    {
+      this.dates = [];
+    }
     let c = this.days.findIndex(x=>x==i);
     console.log(i,c);
 
@@ -54,6 +89,52 @@ export class DatePage implements OnInit {
     } else{
       this.days.push(i);
     }
+  }
+
+  async openCalendar() {
+    const modal = await this.modalCtrl.create({
+      component: CalModalPage,
+      cssClass: 'cal-modal',
+      backdropDismiss: false
+    });
+
+    await modal.present();
+
+    modal.onDidDismiss().then((result) => {
+      this.days = [];
+
+      this.dates = result.data.dates;
+    });
+  }
+
+  changeOption()
+  {
+    if (this.repeat_to == "1") {
+      this.openCalendar2();
+    }
+  }
+
+  async openCalendar2() {
+    const modal = await this.modalCtrl.create({
+      component: Cal2ModalPage,
+      cssClass: 'cal-modal',
+      backdropDismiss: false
+    });
+
+    await modal.present();
+
+    modal.onDidDismiss().then((result) => {
+      if (!result.data.date) {
+        this.repeat_to = "-1";
+      }else{
+        this.repeat_to_date = result.data.date;
+      }
+    });
+  }
+
+  next()
+  {
+    this.nav.navigateForward('tabs/tab1/walkers');
   }
 
 }

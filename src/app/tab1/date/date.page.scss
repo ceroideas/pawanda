@@ -2,12 +2,43 @@
 	li {
 		list-style: none;
 		float: left;
+		display: inline-block;
+		margin-right: 12px;
 		&:after {
-			content:", ";
+			content:",";
 		}
 
 		&:last-of-type:after {
 			content: "."
 		}
 	}
+}
+
+.dates-repeat {
+	li {
+		list-style: none;
+		float: left;
+		display: inline-block;
+		margin-right: 12px;
+	}
+}
+
+ion-radio {
+  --border-radius: 20px;
+  --inner-border-radius: 20px;
+
+  --color: #ddd;
+  --color-checked: #406060;
+}
+
+ion-radio.ios {
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid #ddd;
+  border-radius: 20px;
+}
+
+.radio-checked.ios {
+  border-color: #406060;
 }

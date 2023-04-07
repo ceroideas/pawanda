@@ -4,20 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { DatePageRoutingModule } from './date-routing.module';
+import { WalkerProfilePageRoutingModule } from './walker-profile-routing.module';
 
-import { DatePage } from './date.page';
-
-import { PipesModule } from '../../pipes/pipes.module';
+import { WalkerProfilePage } from './walker-profile.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PipesModule,
-    DatePageRoutingModule
+    WalkerProfilePageRoutingModule
   ],
-  declarations: [DatePage]
+  declarations: [WalkerProfilePage]
 })
-export class DatePageModule {}
+export class WalkerProfilePageModule {}

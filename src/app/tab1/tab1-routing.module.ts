@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'walkers',
     loadChildren: () => import('./walkers/walkers.module').then( m => m.WalkersPageModule)
+  },
+  {
+    path: 'list',
+    loadChildren: () => import('./list/list.module').then( m => m.ListPageModule)
   }
 ];
 

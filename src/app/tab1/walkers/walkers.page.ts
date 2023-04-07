@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-walkers',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WalkersPage implements OnInit {
 
-  constructor() { }
+  constructor(public nav: NavController, private toast: ToastController) { }
 
   ngOnInit() {
+  }
+
+  delete()
+  {
+    this.toast.create({message:"No se mostrarán alertas para éste paseo", cssClass: "pw-toast", duration: 3000}).then(t=>t.present());
+    this.nav.navigateRoot('tabs/tab3');
   }
 
 }
