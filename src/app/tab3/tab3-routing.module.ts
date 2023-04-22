@@ -14,7 +14,7 @@ const routes: Routes = [
   {
     path: 'cancel',
     loadChildren: () => import('./cancel/cancel.module').then( m => m.CancelPageModule)
-  }
+  },
 ];
 
 @NgModule({

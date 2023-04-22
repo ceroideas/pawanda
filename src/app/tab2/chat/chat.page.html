@@ -13,22 +13,97 @@
 
 <ion-content>
 
-  <div class="padding" style="background-color: #fff; border: 1px solid silver;">
+  <!-- <div class="padding" style="background-color: #fff; border: 1px solid silver;">
     
     <button style="margin-bottom: 0;" class="btn-pw1">Reservar paseo</button>
 
-  </div>
+  </div> -->
 
-  <div class="padding">
+  <div class="padding no-pb" style="height: calc(100% - 100px); overflow: auto;">
     
 
-    <div class="left-bubble">
-      ¿Me envías alguna foto para conocerlo? :)
+    <div class="message-holder">
+      <div class="right-bubble">
+        ¿Me envías alguna foto para conocerlo? :)
+      <span class="hour-sent">3:00PM</span>
+      </div>
     </div>
 
-    <div class="right-bubble">
-      Claro, ahora te envío
+    <div class="alert-pw">
+      
+      <ion-item>
+        
+        <div class="alert-img" slot="start">
+          <img src="assets/paseos/photo.svg" alt="">
+        </div>
+
+        <div class="alert-msg">
+          Cristina ha recibido un recordatorio para enviarte fotos de su paseo
+        </div>
+
+      </ion-item>
+
     </div>
+
+    <div class="message-holder">
+      <div class="left-bubble">
+
+        <div class="chat-pic-2" [ngStyle]="{'background-image':'url(./assets/chat/2.jpg)'}">
+          
+        </div>
+
+        <div class="message">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quod consequuntur maxime inventore delectus corrupti cumque.
+          
+          <span class="hour-sent">3:00PM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="message-holder">
+      <div class="left-bubble">
+
+        <div class="chat-pic-2" [ngStyle]="{'background-image':'url(./assets/chat/2.jpg)'}">
+          
+        </div>
+
+        <div class="message">
+          <!-- <img src="/assets/dog1.jpg" alt=""> -->
+          <div class="chat-picture" [ngStyle]="{'background-image':'url(./assets/dog1.jpg)'}">
+          </div>
+        </div>
+      <span class="hour-sent">3:00PM</span>
+      </div>
+    </div>
+
+    <div class="message-holder">
+      <div class="right-bubble">
+        Gracias!
+      <span class="hour-sent">3:00PM</span>
+      </div>
+    </div>
+
+    <div class="alert-pw">
+      
+      <ion-item>
+        
+        <div class="alert-img" slot="start">
+          <img src="assets/paseos/flag-1.svg" alt="">
+        </div>
+
+        <div class="alert-msg">
+          El paseo ha terminado a las 8:00
+        </div>
+
+      </ion-item>
+
+    </div>
+
+  </div>
+
+  <div class="padding" style="background-color: #fff; border: 1px solid silver;">
+    
+    <button [routerLink]="['check-reserve']" style="margin-bottom: 0;" class="btn-pw1">Confirmar fin del paseo y opinar</button>
 
   </div>
 

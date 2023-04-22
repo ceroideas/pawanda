@@ -7,6 +7,14 @@ const routes: Routes = [
   {
     path: '',
     component: ChatPage
+  },
+  {
+    path: 'check-reserve',
+    loadChildren: () => import('./check-reserve/check-reserve.module').then( m => m.CheckReservePageModule)
+  },
+  {
+    path: 'confirm-reserve',
+    loadChildren: () => import('./confirm-reserve/confirm-reserve.module').then( m => m.ConfirmReservePageModule)
   }
 ];
 

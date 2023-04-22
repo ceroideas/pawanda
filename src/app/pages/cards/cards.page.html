@@ -1,0 +1,106 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>myinfo</ion-title>
+  </ion-toolbar>
+</ion-header>
+ -->
+<ion-content *ngIf="card">
+
+  <div class="padding">
+
+    <h5 class="color-pw wb" style="margin-bottom: 0;" (click)="nav.back()">
+      <ion-icon name="arrow-back" style="position: relative; top: 2px;"></ion-icon>
+      Tarjeta guardada</h5>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <ion-item lines="none">
+
+
+      <div class="card">
+        
+        <div class="info">
+
+          <h2>Alias: Tarjeta Master</h2>
+
+          <h3>Guy Hawkins Robert</h3>
+          
+        </div>
+
+      </div>
+      
+
+    </ion-item>
+
+    <br>
+
+  </div>
+
+</ion-content>
+
+<ion-footer *ngIf="card">
+  <div class="padding">
+  <button class="btn-pw3" (click)="card = false; deleting = true; empty = false;">Eliminar</button>
+  </div>
+
+</ion-footer>
+
+<ion-content *ngIf="deleting">
+
+  <div class="padding" style="text-align: center; margin-top: 40%;">
+    <img src="assets/bin.png" id="delete-dog" alt="" style="">
+
+    <br>
+    <br>
+
+    Vas a eliminar tu tarjeta <br> con alias Tarjeta Master <br> ¿estás seguro?
+
+    <br>
+
+    <br>
+    <br>
+
+    <ion-row class="ion-no-margin">
+      
+      <ion-col>
+        <button class="btn-pw1" (click)="card = true; deleting = false; empty = false;">No, mantener</button>
+      </ion-col>
+
+      <ion-col>
+        <button class="btn-pw3" (click)="card = false; deleting = false; empty = true;">Sí, eliminar</button>
+      </ion-col>
+
+    </ion-row>
+  </div>
+
+</ion-content>
+
+
+<ion-content *ngIf="empty">
+
+  <div class="padding" style="text-align: center; margin-top: 40%;">
+    <img src="assets/no-card.svg" id="delete-dog" alt="" style="left: 6%;">
+
+    <br>
+    <br>
+
+    No tienes ninguna tarjeta guardada.
+
+    <br>
+
+    <br>
+    <br>
+
+    <ion-row class="ion-no-margin">
+      
+      <ion-col>
+        <button class="btn-pw1" (click)="nav.back()">Volver</button>
+      </ion-col>
+
+    </ion-row>
+  </div>
+
+</ion-content>

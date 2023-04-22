@@ -12,6 +12,7 @@ export class RegisterPage implements OnInit {
   validations_form: FormGroup;
   validation_messages: any;
   errorMessage: string = '';
+  type = 'password';
 
   constructor(private formBuilder: FormBuilder, public nav: NavController) { }
 
@@ -50,12 +51,24 @@ export class RegisterPage implements OnInit {
       phone: new FormControl(null, Validators.compose([
         Validators.required,
       ])),
+      policy: new FormControl(null, Validators.compose([
+        Validators.required,
+      ])),
     });
   }
 
   registerUser(value)
   {
 
+  }
+
+  changeType()
+  {
+    if (this.type == 'password') {
+      this.type = 'text';
+    }else{
+      this.type = 'password';
+    }
   }
 
 }

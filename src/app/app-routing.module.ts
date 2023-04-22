@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'walker-profile',
     loadChildren: () => import('./pages/walker-profile/walker-profile.module').then( m => m.WalkerProfilePageModule)
   },
+  {
+    path: 'cards',
+    loadChildren: () => import('./pages/cards/cards.module').then( m => m.CardsPageModule)
+  },
 ];
 @NgModule({
   imports: [

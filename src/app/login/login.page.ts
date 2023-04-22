@@ -11,6 +11,7 @@ export class LoginPage implements OnInit {
   validations_form: FormGroup;
   validation_messages: any;
   errorMessage: string = '';
+  type = 'password';
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -38,6 +39,15 @@ export class LoginPage implements OnInit {
         Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
       ])),
     });
+  }
+
+  changeType()
+  {
+    if (this.type == 'password') {
+      this.type = 'text';
+    }else{
+      this.type = 'password';
+    }
   }
 
   loginUser(value)

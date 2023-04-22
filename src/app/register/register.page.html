@@ -16,7 +16,7 @@
       
     <ion-list>
 
-        <ion-item class="ion-no-padding" no-lines>
+        <ion-item class="ion-no-padding" lines="none">
           <ion-label position="stacked"> <span class="control-label">Nombre</span> <br> <br> <br> </ion-label>
           <ion-input formControlName="name" type="text" ></ion-input>
 
@@ -29,7 +29,7 @@
                   </ng-container>
                 </div>
 
-        <ion-item class="ion-no-padding" no-lines>
+        <ion-item class="ion-no-padding" lines="none">
           <ion-label position="stacked"> <span class="control-label">Email</span> <br> <br> <br> </ion-label>
           <ion-input placeholder="manolito@gmail.com" formControlName="email" type="email" ></ion-input>
 
@@ -43,9 +43,10 @@
                 </div>
 
 
-        <ion-item class="ion-no-padding" no-lines>
+        <ion-item class="ion-no-padding" lines="none">
           <ion-label position="stacked"> <span class="control-label">Contraseña</span> <br> <br> <br> </ion-label>
-          <ion-input formControlName="password" type="password" ></ion-input>
+          <ion-input formControlName="password" [type]="type" ></ion-input>
+          <img (click)="changeType()" src="assets/eye.png" alt="" style="position: absolute; right: 8px; bottom: 20px; z-index: 10;">
 
         </ion-item>
           <div class="validation-errors">
@@ -60,7 +61,7 @@
           Debe tener más de 7 caracteres y un número
         </div>
 
-        <ion-item class="ion-no-padding" no-lines>
+        <ion-item class="ion-no-padding" lines="none">
           <ion-label position="stacked"> <span class="control-label">Móvil</span> <br> <br> <br> </ion-label>
           <ion-input formControlName="phone" type="phone" ></ion-input>
 
@@ -77,6 +78,14 @@
           Sólo lo verán los usuarios con los que reserves un paseo
         </div>
 
+
+        <br>
+
+        <ion-item lines="none">
+          <ion-checkbox value="1" formControlName="policy" slot="start"></ion-checkbox>
+
+          <ion-label> Acepto la politica de gestión de datos</ion-label>
+        </ion-item>
 
         <br>
 
