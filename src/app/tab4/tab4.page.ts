@@ -18,11 +18,16 @@ export class Tab4Page implements OnInit {
     this.alertCtrl.create({message: "¿Quiere cerrar sesión?", buttons: [{
       text:"Si",
       handler: ()=>{
-        this.nav.navigateRoot('login');
+        this.nav.navigateRoot('start');
       }
     },{
       text: "No"
     }]}).then(a=>a.present());
+  }
+
+  enterAsWalker()
+  {
+    this.nav.navigateRoot('/walker');
   }
 
 }

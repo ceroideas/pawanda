@@ -22,7 +22,7 @@
 
     <ion-item lines="none" [routerLink]="['myinfo']">
       
-      <div slot="start">
+      <div slot="start" style="margin-right: 20px;">
         <div class="profile-pic" [ngStyle]="{'background-image':'url(./assets/perfil.jpg)'}">
           
         </div>
@@ -40,42 +40,42 @@
     <ion-list>
       
       <ion-item [routerLink]="['/dogs']" lines="none" style="padding: 8px 0;">
-        <div slot="start">
+        <div slot="start" style="margin-right: 20px;">
           <img src="assets/profile/dueño.svg" alt="" style="width: 30px;">
         </div>
 
         <div>
-          <b>Mis perros</b>
+          <span>Mis perros</span>
         </div>
       </ion-item>
 
       <ion-item [routerLink]="['/cards']" lines="none" style="padding: 8px 0;">
-        <div slot="start">
+        <div slot="start" style="margin-right: 20px;">
           <img src="assets/profile/payment.svg" alt="" style="width: 30px;">
         </div>
 
         <div>
-          <b>Datos bancarios</b>
+          <span>Datos bancarios</span>
         </div>
       </ion-item>
 
       <ion-item [routerLink]="['/support']" lines="none" style="padding: 8px 0;">
-        <div slot="start">
+        <div slot="start" style="margin-right: 20px;">
           <img src="assets/profile/support_agent.svg" alt="" style="width: 30px;">
         </div>
 
         <div>
-          <b>Soporte</b>
+          <span>Soporte</span>
         </div>
       </ion-item>
 
       <ion-item [routerLink]="['/notifications']" lines="none" style="padding: 8px 0;">
-        <div slot="start">
+        <div slot="start" style="margin-right: 20px;">
           <img src="assets/profile/notifications_none.svg" alt="" style="width: 30px;">
         </div>
 
         <div>
-          <b>Notificaciones</b>
+          <span>Notificaciones</span>
         </div>
       </ion-item>
 
@@ -85,23 +85,23 @@
       <br>
 
       <ion-item (click)="logout()" lines="none" style="padding: 8px 0;">
-        <div slot="start">
+        <div slot="start" style="margin-right: 20px;">
           <img src="assets/profile/log-out.svg" alt="" style="width: 30px;">
         </div>
 
         <div class="color-pw">
-          <b>Cerrar sesión</b>
+          <span>Cerrar sesión</span>
         </div>
       </ion-item>
 
 
       <ion-item lines="none" style="padding: 8px 0;">
-        <div slot="start">
+        <div slot="start" style="margin-right: 20px;">
           <img src="assets/profile/Corazonroto.svg" alt="" style="width: 30px;">
         </div>
 
         <div>
-          <b>Eliminar cuenta</b>
+          <span>Eliminar cuenta</span>
         </div>
       </ion-item>
 
@@ -111,7 +111,7 @@
     <br>
     <br>
 
-    <button class="btn-pw1" routerLink="/tabs">Entrar como paseador</button>
+    <button class="btn-pw1" (click)="enterAsWalker()">Entrar como paseador</button>
     <!-- <h5 class="color-pw wb" style="margin-bottom: 0;">Buscar paseadores</h5> -->
 
   </div>

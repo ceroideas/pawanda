@@ -20,52 +20,6 @@
     
     <h5 class="color-pw wb" style="margin-bottom: 0;">Buscar paseadores</h5>
 
-
-    <div>
-
-      <br>
-
-      <div class="walk-find">
-
-        <ion-item lines="none" [routerLink]="['list']">
-          
-
-        <ion-row style="width: 100%;">
-          
-          <ion-col size="6">
-            
-            <span style="font-size: 12px;">
-              <ion-icon name="calendar-clear-outline"></ion-icon> 12 de enero de 2021
-            </span> <br>
-
-            <span style="font-size: 12px;">
-              <ion-icon name="alarm-outline"></ion-icon> De 08:00 a 14:00 h
-            </span>
-
-          </ion-col>
-          <ion-col size="6">
-            <span style="font-size: 12px;">
-              <ion-icon name="repeat-outline"></ion-icon> Todos los lunes
-            </span> <br>
-
-            <span style="font-size: 12px;">
-              <ion-icon name="pin-outline"></ion-icon> Calle Iriarte, 9
-            </span>
-            
-          </ion-col>
-
-        </ion-row>
-
-        <div slot="end">
-          <ion-icon name="chevron-forward-outline"></ion-icon>
-        </div>
-
-        </ion-item>
-        
-      </div>
-      
-    </div>
-
     <ion-item class="ion-no-padding" lines="none">
       <ion-label position="stacked"> <span class="control-label">Selecciona qué perro/s quieres pasear</span> <br> <br> <br> </ion-label>
     </ion-item>
@@ -90,7 +44,7 @@
     <ion-item>
       
       <div style="padding: 8px 0; font-size: 18px;" slot="start">
-        <span [routerLink]="['/dogs/create']" class="color-pw wb link"><ion-icon name="add-circle-outline" style="position: relative; top: 4px;"></ion-icon>Añadir nuevo perro</span>
+        <span [routerLink]="['/dogs/create']" class="color-pw wb link"><ion-icon src="assets/add_circle.svg" style="position: relative; top: 4px; font-size: 22px; padding-right: 12px;"></ion-icon>Añadir nuevo perro</span>
       </div>
 
     </ion-item>

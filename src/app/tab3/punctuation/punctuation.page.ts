@@ -18,7 +18,7 @@ export class PunctuationPage implements OnInit {
 
   publish()
   {
-    this.toast.create({message:"Opinión publicada", cssClass: "pw-toast", duration: 3000}).then(t=>t.present());
+    this.toast.create({message:"Opinión publicada", cssClass: "pw-toast", icon: 'checkmark-circle-outline', buttons: [{icon: 'close', role: 'cancel'}]}).then(t=>t.present());
     this.nav.back();
   }
 

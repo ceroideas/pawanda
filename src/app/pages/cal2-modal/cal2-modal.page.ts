@@ -11,6 +11,11 @@ export class Cal2ModalPage implements OnInit {
 
   date: string;
   type: 'string'; // 'string' | 'js-date' | 'moment' | 'time' | 'object'
+  options: CalendarComponentOptions = {
+    weekdays: ['L','M','X','J','V','S','D'],
+    monthPickerFormat: ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"],
+    monthFormat: "MMM - YYYY"
+  };
 
   ngOnInit() {
   }

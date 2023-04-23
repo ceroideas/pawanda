@@ -70,7 +70,9 @@ export class DatePage implements OnInit {
 
   /**/
 
-  constructor(public nav: NavController, public modalCtrl: ModalController) { }
+  constructor(public nav: NavController, public modalCtrl: ModalController) {
+    moment.locale('es-ES')
+  }
 
   ngOnInit() {
   }

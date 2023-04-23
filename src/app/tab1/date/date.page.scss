@@ -3,7 +3,8 @@
 		list-style: none;
 		float: left;
 		display: inline-block;
-		margin-right: 12px;
+		margin-right: 4px;
+		text-transform: lowercase;
 		&:after {
 			content:",";
 		}
@@ -19,7 +20,8 @@
 		list-style: none;
 		float: left;
 		display: inline-block;
-		margin-right: 12px;
+		margin-right: 4px;
+		text-transform: lowercase;
 	}
 }
 

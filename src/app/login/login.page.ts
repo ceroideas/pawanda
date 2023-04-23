@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -12,8 +14,11 @@ export class LoginPage implements OnInit {
   validation_messages: any;
   errorMessage: string = '';
   type = 'password';
+  role;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private route: ActivatedRoute, private nav: NavController) {
+    this.role = this.route.snapshot.paramMap.get('id');
+  }
 
   ngOnInit() {
     this.validation_messages = {
@@ -52,6 +57,10 @@ export class LoginPage implements OnInit {
 
   loginUser(value)
   {
-    
+    if (this.role == 1) {
+      this.nav.navigateRoot('walker');
+    }else{
+      this.nav.navigateRoot('tabs');
+    }
   }
 }

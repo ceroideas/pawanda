@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./start/start.module').then( m => m.StartPageModule)
   },
   {
-    path: 'login',
+    path: 'login/:id',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
@@ -50,6 +50,26 @@ const routes: Routes = [
   {
     path: 'cards',
     loadChildren: () => import('./pages/cards/cards.module').then( m => m.CardsPageModule)
+  },
+  {
+    path: 'walker',
+    loadChildren: () => import('./walker/walker.module').then( m => m.WalkerPageModule)
+  },
+  {
+    path: 'walker1',
+    loadChildren: () => import('./walker1/walker1.module').then( m => m.Walker1PageModule)
+  },
+  {
+    path: 'walker2',
+    loadChildren: () => import('./walker2/walker2.module').then( m => m.Walker2PageModule)
+  },
+  {
+    path: 'walker3',
+    loadChildren: () => import('./walker3/walker3.module').then( m => m.Walker3PageModule)
+  },
+  {
+    path: 'walker4',
+    loadChildren: () => import('./walker4/walker4.module').then( m => m.Walker4PageModule)
   },
 ];
 @NgModule({
