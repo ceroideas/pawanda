@@ -4,3 +4,22 @@ ion-footer {
 		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAHBAMAAADzDtBxAAAAD1BMVEUAAAAAAAAAAAAAAAAAAABPDueNAAAABXRSTlMUCS0gBIh/TXEAAAAaSURBVAjXYxCEAgY4UIICBmMogMsgFLtAAQCNSwXZKOdPxgAAAABJRU5ErkJggg==) !important;
 	}
 }
+
+h5.color-pw.wb{
+  ion-icon {
+    padding-right: 20px
+  }
+
+  margin-bottom: 0;
+  position: fixed;
+  z-index: 9999;
+  padding: 20px;
+  width: 100%;
+  left: 0px;
+  top: 0;
+  background-color: #fff;
+}
+
+.padding {
+	padding-top: 40px;
+}

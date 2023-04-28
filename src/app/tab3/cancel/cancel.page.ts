@@ -15,7 +15,7 @@ export class CancelPage implements OnInit {
 
   delete()
   {
-    this.toast.create({message:"Has cancelado el paseo", cssClass: "pw-toast", duration: 3000}).then(t=>t.present());
+    this.toast.create({message:"Has cancelado el paseo", cssClass: "pw-toast",icon: 'checkmark-circle-outline', buttons: [{icon: 'close', role: 'cancel'}]}).then(t=>t.present());
     this.nav.back();
   }
 

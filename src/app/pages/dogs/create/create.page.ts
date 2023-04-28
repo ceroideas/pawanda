@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { NavController, ToastController } from '@ionic/angular';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 
@@ -65,7 +65,7 @@ export class CreatePage implements OnInit {
 
   save()
   {
-    this.toast.create({message:"Mona ha sido añadido", cssClass: "pw-toast", duration: 3000}).then(t=>t.present());
+    this.toast.create({message:"Mona ha sido añadido", cssClass: "pw-toast",icon: 'checkmark-circle-outline', buttons: [{icon: 'close', role: 'cancel'}]}).then(t=>t.present());
     this.nav.back();
   }
 

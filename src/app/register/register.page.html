@@ -46,7 +46,13 @@
         <ion-item class="ion-no-padding" lines="none">
           <ion-label position="stacked"> <span class="control-label">Contraseña</span> <br> <br> <br> </ion-label>
           <ion-input formControlName="password" [type]="type" ></ion-input>
-          <img (click)="changeType()" src="assets/eye.png" alt="" style="position: absolute; right: 8px; bottom: 20px; z-index: 10;">
+          <img (click)="changeType()" src="assets/eye.svg" alt="" style="
+              position: absolute;
+              right: 12px;
+              bottom: 15px;
+              z-index: 10;
+              width: 30px;
+          ">
 
         </ion-item>
           <div class="validation-errors">

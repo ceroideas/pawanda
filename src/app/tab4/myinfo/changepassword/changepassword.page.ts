@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { NavController, AlertController, ToastController } from '@ionic/angular';
 
@@ -64,7 +64,7 @@ export class ChangepasswordPage implements OnInit {
     if (value.password != value.repeat_password) {
       this.alertCtrl.create({message: "La nueva contraseña y el campo repetir no coinciden", buttons: ['Ok']}).then(a=>a.present());
     }else{
-      this.toast.create({message:"Tus datos se han guardado", cssClass: "pw-toast", duration: 3000}).then(t=>t.present());
+      this.toast.create({message:"Tus datos se han guardado", cssClass: "pw-toast",icon: 'checkmark-circle-outline', buttons: [{icon: 'close', role: 'cancel'}]}).then(t=>t.present());
       this.nav.back();
     }
   }

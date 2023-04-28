@@ -22,7 +22,7 @@
 
     <ion-item lines="none" [routerLink]="['myinfo']">
       
-      <div slot="start" style="margin-right: 20px;">
+      <div class="profile-img" slot="start" style="margin-right: 20px;">
         <div class="profile-pic" [ngStyle]="{'background-image':'url(./assets/perfil.jpg)'}">
           
         </div>
@@ -40,7 +40,7 @@
     <ion-list>
       
       <ion-item [routerLink]="['/dogs']" lines="none" style="padding: 8px 0;">
-        <div slot="start" style="margin-right: 20px;">
+        <div class="profile-img" slot="start" style="margin-right: 20px;">
           <img src="assets/profile/dueño.svg" alt="" style="width: 30px;">
         </div>
 
@@ -50,7 +50,7 @@
       </ion-item>
 
       <ion-item [routerLink]="['/cards']" lines="none" style="padding: 8px 0;">
-        <div slot="start" style="margin-right: 20px;">
+        <div class="profile-img" slot="start" style="margin-right: 20px;">
           <img src="assets/profile/payment.svg" alt="" style="width: 30px;">
         </div>
 
@@ -60,7 +60,7 @@
       </ion-item>
 
       <ion-item [routerLink]="['/support']" lines="none" style="padding: 8px 0;">
-        <div slot="start" style="margin-right: 20px;">
+        <div class="profile-img" slot="start" style="margin-right: 20px;">
           <img src="assets/profile/support_agent.svg" alt="" style="width: 30px;">
         </div>
 
@@ -70,7 +70,7 @@
       </ion-item>
 
       <ion-item [routerLink]="['/notifications']" lines="none" style="padding: 8px 0;">
-        <div slot="start" style="margin-right: 20px;">
+        <div class="profile-img" slot="start" style="margin-right: 20px;">
           <img src="assets/profile/notifications_none.svg" alt="" style="width: 30px;">
         </div>
 
@@ -85,7 +85,7 @@
       <br>
 
       <ion-item (click)="logout()" lines="none" style="padding: 8px 0;">
-        <div slot="start" style="margin-right: 20px;">
+        <div class="profile-img" slot="start" style="margin-right: 20px;">
           <img src="assets/profile/log-out.svg" alt="" style="width: 30px;">
         </div>
 
@@ -96,7 +96,7 @@
 
 
       <ion-item lines="none" style="padding: 8px 0;">
-        <div slot="start" style="margin-right: 20px;">
+        <div class="profile-img" slot="start" style="margin-right: 20px;">
           <img src="assets/profile/Corazonroto.svg" alt="" style="width: 30px;">
         </div>
 

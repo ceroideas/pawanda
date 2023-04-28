@@ -48,7 +48,7 @@ export class SupportPage implements OnInit {
     setTimeout(()=>{
       this.nav.back();
     },3000)
-    // this.toast.create({message:"Se ha enviado tu mensaje al equipo de soporte, te responderemos en a brevedad posible", cssClass: "pw-toast", duration: 3000}).then(t=>t.present());
+    // this.toast.create({message:"Se ha enviado tu mensaje al equipo de soporte, te responderemos en a brevedad posible", cssClass: "pw-toast",icon: 'checkmark-circle-outline', buttons: [{icon: 'close', role: 'cancel'}]}).then(t=>t.present());
   }
 
 }

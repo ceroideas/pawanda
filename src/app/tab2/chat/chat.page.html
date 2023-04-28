@@ -1,23 +1,25 @@
-<ion-header>
+﻿<ion-header>
   <ion-toolbar>
-    <ion-title style="text-align: center;">
+    <ion-title style="text-align: center; padding: 10px 0;">
 
-      <ion-icon name="arrow-back" (click)="nav.back()" style="position: absolute; top: 18px; left: 8px;"></ion-icon>
+      <ion-icon src="assets/arrow-left.svg" (click)="nav.back()" style="position: absolute; top: 28px; left: 8px;"></ion-icon>
       <b style="color: #000;">Cristina Alonso</b> <br> <small>Victo hace 3 min</small></ion-title>
 
 
-      <div slot="start" class="profile-pic" style="background-image: url(assets/chat/1.jpg); position: absolute; right: 8px; top: 8px;"></div>
+      <div slot="start" class="profile-pic" style="background-image: url(assets/chat/1.jpg); position: absolute; right: 8px; top: 16px;">
+        <div class="status-online"></div>
+      </div>
 
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <!-- <div class="padding" style="background-color: #fff; border: 1px solid silver;">
+  <div class="padding" style="background-color: #fff; border: 1px solid silver;">
     
-    <button style="margin-bottom: 0;" class="btn-pw1">Reservar paseo</button>
+    <button [routerLink]="['check-reserve']" style="margin-bottom: 0;" class="btn-pw1">Reservar paseo</button>
 
-  </div> -->
+  </div>
 
   <div class="padding no-pb" style="height: calc(100% - 100px); overflow: auto;">
     
@@ -101,11 +103,11 @@
 
   </div>
 
-  <div class="padding" style="background-color: #fff; border: 1px solid silver;">
+  <!-- <div class="padding" style="background-color: #fff; border: 1px solid silver;">
     
     <button [routerLink]="['check-reserve']" style="margin-bottom: 0;" class="btn-pw1">Confirmar fin del paseo y opinar</button>
 
-  </div>
+  </div> -->
 
 </ion-content>
 

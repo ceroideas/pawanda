@@ -74,7 +74,7 @@
 
       <ion-item class="ion-no-padding" lines="none">
           <ion-label position="stacked"> <span class="control-label">Raza</span> <br> <br> <br> </ion-label>
-          <ion-select formControlName="race">
+          <ion-select formControlName="race" confirmText="Ok" cancelText="Cancelar">
             <ion-select-option>Pitbull</ion-select-option>
             <ion-select-option>Pastor Aleman</ion-select-option>
             <ion-select-option>Puddle</ion-select-option>
@@ -101,26 +101,26 @@
       <ion-radio-group formControlName="size">
 
       <ion-item class="ion-no-padding" lines="none" mode="md">
-        <ion-radio value="1" slot="start"></ion-radio>
+        <ion-radio color="secondary" value="1" slot="start"></ion-radio>
         <ion-label>Grandes (>10Kg) </ion-label>
       </ion-item>
 
 
       <ion-item class="ion-no-padding" lines="none" mode="md">
-        <ion-radio value="2" slot="start"></ion-radio>
+        <ion-radio color="secondary" value="2" slot="start"></ion-radio>
         <ion-label>Medianos (5 - 10Kg) </ion-label>
       </ion-item>
 
 
       <ion-item class="ion-no-padding" lines="none" mode="md">
-        <ion-radio value="3" slot="start"></ion-radio>
+        <ion-radio color="secondary" value="3" slot="start"></ion-radio>
         <ion-label>Pequeños (<5Kg) </ion-label>
       </ion-item>
 
       </ion-radio-group>
 
       <ion-item class="ion-no-padding" lines="none" mode="md">
-        <ion-checkbox slot="start"></ion-checkbox>
+        <ion-checkbox color="secondary" slot="start"></ion-checkbox>
         <ion-label>PPP (Perro potencialmente peligroso) </ion-label>
       </ion-item>
       
