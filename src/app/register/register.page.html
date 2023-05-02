@@ -90,7 +90,7 @@
         <ion-item lines="none">
           <ion-checkbox value="1" formControlName="policy" slot="start" style="    --border-radius: 50px"></ion-checkbox>
 
-          <ion-label> Acepto la politica de gestión de datos</ion-label>
+          <ion-label> Acepto la <a href="https://#" target="_blank">politica de gestión de datos</a></ion-label>
         </ion-item>
           <div class="validation-errors">
                   <ng-container *ngFor="let validation of validation_messages.policy">
@@ -102,7 +102,7 @@
 
         <br>
 
-        <button class="btn-pw1" routerLink="/tabs">Registrarme</button>
+        <button class="btn-pw1" [disabled]="!validations_form.valid" routerLink="/tabs">Registrarme</button>
 
 
       </ion-list>
