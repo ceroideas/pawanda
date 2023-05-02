@@ -88,10 +88,17 @@
         <br>
 
         <ion-item lines="none">
-          <ion-checkbox value="1" formControlName="policy" slot="start"></ion-checkbox>
+          <ion-checkbox value="1" formControlName="policy" slot="start" style="    --border-radius: 50px"></ion-checkbox>
 
           <ion-label> Acepto la politica de gestión de datos</ion-label>
         </ion-item>
+          <div class="validation-errors">
+                  <ng-container *ngFor="let validation of validation_messages.policy">
+                    <div class="error-message" *ngIf="validations_form.get('policy').hasError(validation.type) && (validations_form.get('policy').dirty || validations_form.get('policy').touched)">
+                      {{ validation.message }}
+                    </div>
+                  </ng-container>
+                </div>
 
         <br>
 

@@ -362,7 +362,7 @@ ion-input {
   border: 1px solid silver;
   border-radius: 8px;
   input {
-    padding: 20px !important;
+    padding: 17px !important;
     border-radius: 8px !important;
   }
 }
@@ -371,7 +371,7 @@ ion-select, ion-textarea {
   background-color: #fff !important;
   border: 1px solid silver;
   border-radius: 8px;
-  padding: 20px !important;
+  padding: 17px !important;
 }
 
 .control-label {
@@ -454,14 +454,14 @@ b {
   font-weight: 400;
 }
 
-[name="star"] {
+[src="assets/walk/star.svg"],[name="star"] {
   color: rgba(255, 184, 0, 1);
-  font-size: 18px;
+  font-size: 24px;
 }
 
-[name="star-outline"] {
+[src="assets/walk/star-outline.svg"],[name="star-outline"] {
   color: rgba(189, 189, 189, 1);
-  font-size: 18px;
+  font-size: 24px;
 }
 
 ion-footer {
@@ -597,7 +597,7 @@ ion-select.ion-valid {
   border: 1px solid green;
 }
 
-ion-select.ion-invalid {
+ion-select.ion-invalid.ion-touched {
   border: 1px solid crimson;
 }
 
@@ -628,4 +628,9 @@ ion-toast.pw-toast::part(button) {
   // border-left: 1px solid #d2d2d2;
   color: #333 !important;
   // font-size: 15px;
+}
+
+ion-select::part(icon) {
+  content: url('../assets/expand_more.svg');
+  width: 24px;
 }

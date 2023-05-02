@@ -71,6 +71,10 @@ const routes: Routes = [
     path: 'walker4',
     loadChildren: () => import('./walker4/walker4.module').then( m => m.Walker4PageModule)
   },
+  {
+    path: 'chat',
+    loadChildren: () => import('./pages/chat/chat.module').then( m => m.ChatPageModule)
+  }
 ];
 @NgModule({
   imports: [

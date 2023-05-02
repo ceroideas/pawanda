@@ -7,10 +7,10 @@ const routes: Routes = [
     path: '',
     component: Tab2Page,
   },
-  {
-    path: 'chat',
-    loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
-  }
+  // {
+  //   path: 'chat',
+  //   loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
+  // }
 ];
 
 @NgModule({

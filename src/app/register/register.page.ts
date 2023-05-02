@@ -33,6 +33,9 @@ export class RegisterPage implements OnInit {
       'phone': [
         { type: 'required', message: 'El campo teléfono es requerido' },
       ],
+      'policy': [
+        { type: 'pattern', message: 'Es obligatrio que aceptes la política para continuar.' },
+      ],
     };
 
     this.validations_form = this.formBuilder.group({
@@ -51,8 +54,8 @@ export class RegisterPage implements OnInit {
       phone: new FormControl(null, Validators.compose([
         Validators.required,
       ])),
-      policy: new FormControl(null, Validators.compose([
-        Validators.required,
+      policy: new FormControl('false', Validators.compose([
+        Validators.pattern('true'),
       ])),
     });
   }
