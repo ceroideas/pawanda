@@ -1,0 +1,7 @@
+{
+  "name": "pawanda",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

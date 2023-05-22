@@ -1,0 +1,23 @@
+﻿<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>map</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+  <div class="padding" style="position: absolute; top: 0; width: 100vw;">
+    <ion-item class="ion-no-padding" lines="none">
+      <ion-icon (click)="nav.back()" slot="start" src="assets/arrow-left.svg"></ion-icon>
+      <ion-input [(ngModel)]="address" type="text"></ion-input>
+    </ion-item>
+  </div>
+
+  <div id="map"> 
+  </div>
+
+  <div class="padding" style="position: absolute; bottom: 0; width: 100vw;">
+    <button class="btn-pw1" (click)="next()">Confirmar ubicación</button>
+  </div>
+
+</ion-content>

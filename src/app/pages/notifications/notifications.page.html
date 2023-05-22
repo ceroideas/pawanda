@@ -1,0 +1,141 @@
+﻿<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      create
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Tab 2 page"></app-explore-container> -->
+
+  <div class="padding">
+    
+    <h5 class="color-pw wb" style="margin-bottom: 0;" (click)="nav.back()">
+      <ion-icon src="assets/arrow-left.svg" style="position: relative; top: 3px; font-size: 20px;"></ion-icon>
+    Notificaciones</h5>
+
+
+    <br>
+    <br>
+
+    <ion-list>
+      
+      <ion-item style="padding: 8px 0;">
+
+        <div style="width: 100%">
+          <b>¡Paseador encontrado!</b>
+          <h4 style="margin-top: 0;margin-bottom: 20px;"><small>Coincide con tu búsqueda</small></h4>
+
+          <ion-icon *ngIf="condition != 1" (click)="condition = 1" style="right: 6px; top: 6px; position: absolute;font-size: 18px; font-weight: bolder;" name="chevron-down-outline"></ion-icon>
+          <ion-icon *ngIf="condition == 1" (click)="condition = null" style="right: 6px; top: 6px; position: absolute;font-size: 18px; font-weight: bolder;" name="chevron-up-outline"></ion-icon>
+
+          <div style="overflow: auto;" [ngStyle]="{'height': condition == 1 ? 'auto' : 0}">
+
+            <ion-item lines="none">
+              
+              <div slot="start" class="profile-pic" style="background-image: url(assets/chat/1.jpg);">
+              </div>
+
+              <div style="font-size: 14px;">
+                <span class="color-pw link">Ronald Richards</span> <br>
+
+                <span style="color: #000; display: block; margin-top: 10px;">600 000 000</span>
+              </div>
+
+              <div slot="end">
+                <b>12€</b>
+              </div>
+            </ion-item>
+
+            <div class="mid-section">
+              <ion-row>
+                
+                <ion-col size="6">
+                  
+                  <span>
+                    <ion-icon name="calendar-clear-outline"></ion-icon> 12 de enero de 2021
+                  </span>
+
+                  <span>
+                    <ion-icon name="alarm-outline"></ion-icon> De 08:00 a 14:00 h
+                  </span>
+
+                  <!-- <span>
+                    <ion-icon name="repeat-outline"></ion-icon> Todos los lunes
+                  </span> -->
+
+                </ion-col>
+                <ion-col size="6">
+
+                  <span>
+                    <ion-icon name="pin-outline"></ion-icon> Calle Iriarte, 9
+                  </span>
+
+                  <span>
+                    <ion-icon name="timer-outline"></ion-icon> Faltan 21 horas
+                  </span>
+
+                  
+                </ion-col>
+
+              </ion-row>
+            </div>
+          </div>
+        </div>
+
+      </ion-item>
+
+      <ion-item style="padding: 8px 0;">
+        
+        <div style="width: 100%">
+          <b>Mensaje de la app</b>
+          <h4 style="margin-top: 0;"><small>For athletes, high altitude produces two contradictory effects on performance</small></h4>
+
+          <ion-icon *ngIf="condition != 2" (click)="condition = 2" style="right: 6px; top: 6px; position: absolute;font-size: 18px; font-weight: bolder;" name="chevron-down-outline"></ion-icon>
+          <ion-icon *ngIf="condition == 2" (click)="condition = null" style="right: 6px; top: 6px; position: absolute;font-size: 18px; font-weight: bolder;" name="chevron-up-outline"></ion-icon>
+
+          <div style="overflow: auto;" [ngStyle]="{'height': condition == 2 ? 'auto' : 0}">
+
+            Mensaje de la app
+
+            <br> <br>
+
+          </div>
+
+        </div>
+
+      </ion-item>
+
+      <ion-item style="padding: 8px 0;">
+        
+        <div style="width: 100%">
+          <b>Mensaje de la app</b>
+          <h4 style="margin-top: 0;"><small>For athletes, high altitude produces two contradictory effects on performance</small></h4>
+
+          <ion-icon *ngIf="condition != 3" (click)="condition = 3" style="right: 6px; top: 6px; position: absolute;font-size: 18px; font-weight: bolder;" name="chevron-down-outline"></ion-icon>
+          <ion-icon *ngIf="condition == 3" (click)="condition = null" style="right: 6px; top: 6px; position: absolute;font-size: 18px; font-weight: bolder;" name="chevron-up-outline"></ion-icon>
+
+          <div style="overflow: auto;" [ngStyle]="{'height': condition == 3 ? 'auto' : 0}">
+
+            Mensaje de la app
+
+            <br> <br>
+
+          </div>
+
+        </div>
+
+      </ion-item>
+
+    </ion-list>
+
+  </div>
+</ion-content>

@@ -1,0 +1,105 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 2</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Tab 2 page"></app-explore-container> -->
+
+  <div class="padding">
+    
+    <h5 class="color-pw wb" style="margin-bottom: 0;">Chat</h5>
+
+
+    <br>
+    <br>
+
+    <ion-list>
+      
+      <ion-item lines="none" [routerLink]="['/chat']">
+      
+        <div slot="start" style="margin-right: 16px;">
+          <div class="chat-pic" [ngStyle]="{'background-image':'url(./assets/chat/1.jpg)'}">
+            
+          </div>
+        </div>
+
+        <div>
+          <h4>Marina Alvez <br>
+
+          <small>What a big truck!</small></h4>
+        </div>
+
+        <small slot="end">Ayer</small>
+
+      </ion-item>
+
+
+      <ion-item lines="none" [routerLink]="['/chat']">
+      
+        <div slot="start" style="margin-right: 16px;">
+          <div class="chat-pic" [ngStyle]="{'background-image':'url(./assets/chat/2.jpg)'}">
+            
+          </div>
+        </div>
+
+        <div>
+          <h4>Courtney Henry <br>
+
+          <small>I just walked on the furriest lawn.</small></h4>
+        </div>
+
+        <small slot="end">13:30</small>
+
+      </ion-item>
+
+      <ion-item lines="none" [routerLink]="['/chat']">
+      
+        <div slot="start" style="margin-right: 16px;">
+          <div class="chat-pic" [ngStyle]="{'background-image':'url(./assets/chat/3.jpg)'}">
+            
+          </div>
+        </div>
+
+        <div>
+          <h4>Cristina Alonso <br>
+
+          <small>He's down on his luck.</small></h4>
+        </div>
+
+        <small slot="end">18:00</small>
+
+      </ion-item>
+
+      <ion-item lines="none" [routerLink]="['/chat']">
+      
+        <div slot="start" style="margin-right: 16px;">
+          <div class="chat-pic" [ngStyle]="{'background-image':'url(./assets/chat/4.jpg)'}">
+            
+          </div>
+        </div>
+
+        <div>
+          <h4>Cristina Alonso <br>
+
+          <small>I'm hopping for a really big discount.</small></h4>
+        </div>
+
+        <small slot="end">14:00</small>
+
+      </ion-item>
+
+    </ion-list>
+
+  </div>
+</ion-content>

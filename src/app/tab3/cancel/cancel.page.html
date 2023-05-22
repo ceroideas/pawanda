@@ -1,0 +1,38 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>delete</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+  <div class="padding" style="text-align: center; margin-top: 30%;">
+    <img src="assets/cancel.svg" id="delete-dog" alt="" style="left: 7%;">
+
+    <br>
+    <br>
+    <div style="line-height: 26.04px;">
+    <b>Queda menos de 1 hora para tu paseo.</b> <br>
+
+    Si cancelas, el paseador recibirá el XX% <br>
+
+    del precio acordado
+
+    </div>
+
+    <br>
+    <br>
+
+    <ion-row class="ion-no-margin">
+      
+      <ion-col>
+        <button class="btn-pw1" (click)="nav.back()">No, mantener</button>
+      </ion-col>
+      <ion-col>
+        <button class="btn-pw3" (click)="delete()">Si, cancelar</button>
+      </ion-col>
+
+    </ion-row>
+  </div>
+
+</ion-content>

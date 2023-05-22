@@ -1,0 +1,131 @@
+﻿<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>check-reserve</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+
+    <div class="padding">
+    
+    <h5 class="color-pw wb" style="margin-bottom: 0;">
+        <ion-icon (click)="nav.back()" src="assets/arrow-left.svg" style="position: relative; top: 2px;"></ion-icon>
+        ¡Comprueba los datos y reserva!
+      </h5>
+
+      <br>
+
+    <div>
+
+      <br>
+
+      <div class="walk-find">
+
+        <ion-item lines="none" [routerLink]="['list']">
+          
+
+        <ion-row style="width: 100%;">
+          
+          <ion-col size="6">
+            
+            <span style="font-size: 14px;">
+              <ion-icon name="calendar-clear-outline"></ion-icon> 12 de enero de 2021
+            </span> <br>
+
+            <span style="font-size: 14px;">
+              <ion-icon name="alarm-outline"></ion-icon> De 08:00 a 14:00 h
+            </span> <br>
+
+            <span style="font-size: 14px;">
+              <ion-icon name="repeat-outline"></ion-icon> Todos los lunes
+            </span> <br>
+
+            <span style="font-size: 14px;">
+              <ion-icon name="pin-outline"></ion-icon> Calle Iriarte, 9
+            </span>
+
+          </ion-col>
+          <ion-col size="6">
+            
+
+            <span style="font-size: 14px;">
+              <ion-icon src="assets/paseos/paseo-2.svg"></ion-icon> 1 perro mediano
+            </span> <br>
+
+            <span style="font-size: 14px;">
+              <ion-icon name="camera-outline"></ion-icon> Cada 15 minutos
+            </span> <br>
+
+            <span style="font-size: 14px;">
+              <ion-icon src="assets/timelapse.svg"></ion-icon> Faltan 21:45 h
+            </span> <br>
+            
+          </ion-col>
+
+        </ion-row>
+
+        </ion-item>
+        
+      </div>
+      
+    </div>
+
+
+
+    <h1 style="font-size: 42px; margin-top: 30px;">52,00 €</h1>
+
+    <br>
+
+    <label>Detalles</label>
+
+    <br>
+    <br>
+
+    <table style="width: 100%;">
+      
+      <tr>
+        <th style="text-align: left; padding: 12px 0;">
+          4 paseos x13 €
+        </th>
+
+        <th style="text-align: right;">
+          10 €
+        </th>
+      </tr>
+
+      <tr>
+        <th style="text-align: left; padding: 12px 0;">
+          Gastos de gestión
+        </th>
+
+        <th style="text-align: right;">
+          3 €
+        </th>
+      </tr>
+
+      <tr>
+        <th colspan="2" style="border-bottom: 1px solid silver; padding: 8px 0;"></th>
+      </tr>
+
+      <tr>
+        <th style="text-align: left; padding: 18px 0;">
+          Total
+        </th>
+
+        <th style="text-align: right;">
+          52 €
+        </th>
+      </tr>
+
+    </table>
+
+    </div>
+
+</ion-content>
+
+<ion-footer>
+  <div class="padding">
+  <button class="btn-pw1" [routerLink]="['../confirm-reserve']">Confirmar reserva</button>
+  </div>
+
+</ion-footer>

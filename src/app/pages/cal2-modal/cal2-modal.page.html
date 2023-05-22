@@ -1,0 +1,31 @@
+<ion-toolbar color="light">
+  <ion-buttons slot="end">
+    <ion-button (click)="close()">
+      <ion-icon name="close" slot="icon-only"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title></ion-title>
+  <!-- <ion-buttons slot="end">
+    <ion-button (click)="save()">
+      <ion-icon name="checkmark" slot="icon-only"></ion-icon>
+    </ion-button>
+  </ion-buttons> -->
+</ion-toolbar>
+
+<ion-content>
+
+  <ion-calendar
+    *ngIf="modalReady"
+    [(ngModel)]="date"
+    [options]="options"
+  >
+  </ion-calendar>
+</ion-content>
+
+<ion-footer>
+
+  <div class="padding">
+  <button class="btn-pw1" (click)="save()">Aceptar</button>
+  </div>
+
+</ion-footer>

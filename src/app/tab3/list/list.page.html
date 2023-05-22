@@ -1,0 +1,198 @@
+﻿<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>changepassword</ion-title>
+  </ion-toolbar>
+</ion-header>
+ -->
+<ion-content>
+
+
+  <div *ngIf="viewMap">
+
+    <div class="padding">
+      <h5 class="color-pw wb" style="margin-bottom: 0;">
+        <ion-icon (click)="nav.back()" src="assets/arrow-left.svg" style="position: relative; top: 2px;"></ion-icon>
+        Paseadores encontrados
+
+
+        <ion-icon (click)="changeList()" name="list-outline" style="float: right; font-size: 24px;"></ion-icon>
+
+        <span style="clear: both;"></span>
+
+      </h5>
+    </div>
+    
+    <div id="map"> 
+    </div>
+
+
+
+    <div class="walker-box absolute" *ngIf="showDetail">
+
+      <ion-icon name="close-outline" style="position: absolute; right: 12px; top: 12px; z-index: 9999; font-size: 24px;" (click)="showDetail = false"></ion-icon>
+      
+      <ion-item lines="none">
+      
+        <div slot="start">
+          <div class="dog-pic" [ngStyle]="{'background-image':'url(./assets/chat/1.jpg)'}">
+            
+          </div>
+        </div>
+
+        <div>
+          <h4><b style="font-size: 18px;">Cristina Alonso</b> <br>
+
+            <span style="position: relative; margin-right: 8px; top: 2px;">
+              <ion-icon src="assets/walk/star.svg"></ion-icon>
+              <ion-icon src="assets/walk/star.svg"></ion-icon>
+              <ion-icon src="assets/walk/star.svg"></ion-icon>
+              <ion-icon src="assets/walk/star.svg"></ion-icon>
+              <ion-icon src="assets/walk/star-outline.svg"></ion-icon>
+            </span> 
+
+            <small [routerLink]="['opinions']" class="color-pw link wb">23 Opiniones</small>
+
+            </h4>
+        </div>
+
+      </ion-item>
+
+      <div style="margin-left: 72px; position: relative; top: -8px;">
+        <h4 style="margin-top: 0;"><img src="assets/money.svg" alt="" style="width: 30px; position: relative; top: 8px;"> <b><small>10 €/hora</small></b></h4>
+      </div>
+
+      <div class="padding-lr"><button class="btn-pw1" (click)="viewProfile()">Contactar</button></div>
+
+    </div>
+  </div>
+
+  <div class="padding" *ngIf="!viewMap">
+
+    <h5 class="color-pw wb" style="margin-bottom: 0;">
+      <ion-icon (click)="nav.back()" src="assets/arrow-left.svg" style="position: relative; top: 2px;"></ion-icon>
+      Paseadores encontrados
+
+
+      <ion-icon (click)="changeMap()" name="map-outline" style="float: right; font-size: 24px;"></ion-icon>
+
+      <span style="clear: both;"></span>
+
+    </h5>
+
+    <br>
+
+    <div class="walker-box">
+      
+      <ion-item lines="none">
+      
+        <div slot="start">
+          <div class="dog-pic" [ngStyle]="{'background-image':'url(./assets/chat/1.jpg)'}">
+            
+          </div>
+        </div>
+
+        <div>
+          <h4><b style="font-size: 18px;">Cristina Alonso</b> <br>
+
+            <span style="position: relative; margin-right: 8px; top: 2px;">
+              <ion-icon src="assets/walk/star.svg"></ion-icon>
+              <ion-icon src="assets/walk/star.svg"></ion-icon>
+              <ion-icon src="assets/walk/star.svg"></ion-icon>
+              <ion-icon src="assets/walk/star.svg"></ion-icon>
+              <ion-icon src="assets/walk/star-outline.svg"></ion-icon>
+            </span> 
+
+            <small [routerLink]="['opinions']" class="color-pw link wb">23 Opiniones</small>
+
+            </h4>
+        </div>
+
+      </ion-item>
+
+      <div style="margin-left: 72px; position: relative; top: -8px;">
+        <h4 style="margin-top: 0;"><img src="assets/money.svg" alt="" style="width: 30px; position: relative; top: 8px;"> <b><small>10 €/hora</small></b></h4>
+      </div>
+
+      <div class="padding-lr"><button class="btn-pw1" (click)="viewProfile()">Contactar</button></div>
+
+    </div>
+
+
+    <div class="walker-box">
+      
+      <ion-item lines="none">
+      
+        <div slot="start">
+          <div class="dog-pic" [ngStyle]="{'background-image':'url(./assets/chat/2.jpg)'}">
+            
+          </div>
+        </div>
+
+        <div>
+          <h4><b style="font-size: 18px;">Darrell Steward</b> <br>
+
+            <span style="position: relative; margin-right: 8px; top: 2px;">
+              <ion-icon src="assets/walk/star.svg"></ion-icon>
+              <ion-icon src="assets/walk/star.svg"></ion-icon>
+              <ion-icon src="assets/walk/star.svg"></ion-icon>
+              <ion-icon src="assets/walk/star.svg"></ion-icon>
+              <ion-icon src="assets/walk/star-outline.svg"></ion-icon>
+            </span> 
+
+            <small [routerLink]="['opinions']" class="color-pw link wb">23 Opiniones</small>
+
+            </h4>
+        </div>
+
+      </ion-item>
+
+      <div style="margin-left: 72px; position: relative; top: -8px;">
+        <h4 style="margin-top: 0;"><img src="assets/money.svg" alt="" style="width: 30px; position: relative; top: 8px;"> <b><small>10 €/hora</small></b></h4>
+      </div>
+
+      <div class="padding-lr"><button class="btn-pw1" (click)="viewProfile()">Contactar</button></div>
+
+    </div>
+
+
+    <div class="walker-box">
+      
+      <ion-item lines="none">
+      
+        <div slot="start">
+          <div class="dog-pic" [ngStyle]="{'background-image':'url(./assets/chat/3.jpg)'}">
+            
+          </div>
+        </div>
+
+        <div>
+          <h4><b style="font-size: 18px;">Guy Hawkins</b> <br>
+
+            <span style="position: relative; margin-right: 8px; top: 2px;">
+              <ion-icon src="assets/walk/star.svg"></ion-icon>
+              <ion-icon src="assets/walk/star.svg"></ion-icon>
+              <ion-icon src="assets/walk/star.svg"></ion-icon>
+              <ion-icon src="assets/walk/star.svg"></ion-icon>
+              <ion-icon src="assets/walk/star-outline.svg"></ion-icon>
+            </span> 
+
+            <small [routerLink]="['opinions']" class="color-pw link wb">23 Opiniones</small>
+
+            </h4>
+        </div>
+
+      </ion-item>
+
+      <div style="margin-left: 72px; position: relative; top: -8px;">
+        <h4 style="margin-top: 0;"><img src="assets/money.svg" alt="" style="width: 30px; position: relative; top: 8px;"> <b><small>10 €/hora</small></b></h4>
+      </div>
+
+      <div class="padding-lr"><button class="btn-pw1" (click)="viewProfile()">Contactar</button></div>
+
+    </div>
+
+    
+  </div>
+
+</ion-content>
+

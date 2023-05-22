@@ -1,0 +1,89 @@
+﻿<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>changepassword</ion-title>
+  </ion-toolbar>
+</ion-header>
+ -->
+<ion-content>
+
+  <div class="padding">
+
+    <h5 class="color-pw wb" style="margin-bottom: 0;" (click)="nav.back()">
+      <ion-icon src="assets/arrow-left.svg" style="position: relative; top: 3px; font-size: 20px;"></ion-icon>
+      Valora al paseador</h5>
+
+    <br>
+
+    <label>¿Recibiste las fotos puntualmente y con calidad?</label>
+
+    <div style="margin-top: 12px;">
+      <label>
+      <ion-icon [src]="'assets/walk/'+(photos > 0 ? 'star' : 'star-outline')+'.svg'" style="font-size: 48px;"></ion-icon>
+      <input type="radio" value="1" [(ngModel)]="photos" style="display: none;">
+      </label>
+      <label>
+      <ion-icon [src]="'assets/walk/'+(photos > 1 ? 'star' : 'star-outline')+'.svg'" style="font-size: 48px;"></ion-icon>
+      <input type="radio" value="2" [(ngModel)]="photos" style="display: none;">
+      </label>
+      <label>
+      <ion-icon [src]="'assets/walk/'+(photos > 2 ? 'star' : 'star-outline')+'.svg'" style="font-size: 48px;"></ion-icon>
+      <input type="radio" value="3" [(ngModel)]="photos" style="display: none;">
+      </label>
+      <label>
+      <ion-icon [src]="'assets/walk/'+(photos > 3 ? 'star' : 'star-outline')+'.svg'" style="font-size: 48px;"></ion-icon>
+      <input type="radio" value="4" [(ngModel)]="photos" style="display: none;">
+      </label>
+      <label>
+      <ion-icon [src]="'assets/walk/'+(photos > 4 ? 'star' : 'star-outline')+'.svg'" style="font-size: 48px;"></ion-icon>
+      <input type="radio" value="5" [(ngModel)]="photos" style="display: none;">
+      </label>
+    </div>
+
+    <br>
+    <label>¿Respondió en un margen de tiempo razonable?</label>
+
+    <div style="margin-top: 12px;">
+      <label>
+      <ion-icon [src]="'assets/walk/'+(response > 0 ? 'star' : 'star-outline')+'.svg'" style="font-size: 48px;"></ion-icon>
+      <input type="radio" value="1" [(ngModel)]="response" style="display: none;">
+      </label>
+      <label>
+      <ion-icon [src]="'assets/walk/'+(response > 1 ? 'star' : 'star-outline')+'.svg'" style="font-size: 48px;"></ion-icon>
+      <input type="radio" value="2" [(ngModel)]="response" style="display: none;">
+      </label>
+      <label>
+      <ion-icon [src]="'assets/walk/'+(response > 2 ? 'star' : 'star-outline')+'.svg'" style="font-size: 48px;"></ion-icon>
+      <input type="radio" value="3" [(ngModel)]="response" style="display: none;">
+      </label>
+      <label>
+      <ion-icon [src]="'assets/walk/'+(response > 3 ? 'star' : 'star-outline')+'.svg'" style="font-size: 48px;"></ion-icon>
+      <input type="radio" value="4" [(ngModel)]="response" style="display: none;">
+      </label>
+      <label>
+      <ion-icon [src]="'assets/walk/'+(response > 4 ? 'star' : 'star-outline')+'.svg'" style="font-size: 48px;"></ion-icon>
+      <input type="radio" value="5" [(ngModel)]="response" style="display: none;">
+      </label>
+    </div>
+
+    <br>
+    <label>Cuéntanos algún detalle que ayude a otros dueños (opcional)</label>
+
+    <ion-textarea></ion-textarea>
+
+    <br>
+
+    <ion-row class="ion-no-margin">
+      
+      <ion-col>
+        <button class="btn-pw1" (click)="publish()">Publicar opinión</button>
+      </ion-col>
+      <ion-col>
+        <button class="btn-pw3" (click)="nav.back()">Opinar más tarde</button>
+      </ion-col>
+
+    </ion-row>
+    
+  </div>
+
+</ion-content>
+

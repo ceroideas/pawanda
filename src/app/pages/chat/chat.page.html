@@ -1,0 +1,132 @@
+﻿<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center; padding: 10px 0;">
+
+      <ion-icon src="assets/arrow-left.svg" (click)="nav.back()" style="position: absolute; top: 28px; left: 8px;"></ion-icon>
+      <b style="color: #000;">Cristina Alonso</b> <br> <small>Victo hace 3 min</small></ion-title>
+
+
+      <div slot="start" class="profile-pic" style="background-image: url(assets/chat/1.jpg); position: absolute; right: 8px; top: 16px;">
+        <div class="status-online"></div>
+      </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="padding" style="background-color: #fff; border: 1px solid silver;">
+    
+    <button [routerLink]="['check-reserve']" style="margin-bottom: 0;" class="btn-pw1">Reservar paseo</button>
+
+  </div>
+
+  <div class="padding no-pb" style="height: calc(100% - 100px); overflow: auto;">
+    
+
+    <div class="message-holder">
+      <div class="right-bubble">
+        ¿Me envías alguna foto para conocerlo? :)
+      <span class="hour-sent">3:00PM</span>
+      </div>
+    </div>
+
+    <div class="alert-pw">
+      
+      <ion-item>
+        
+        <div class="alert-img" slot="start">
+          <img src="assets/paseos/photo.svg" alt="">
+        </div>
+
+        <div class="alert-msg">
+          Cristina ha recibido un recordatorio para enviarte fotos de su paseo
+        </div>
+
+      </ion-item>
+
+    </div>
+
+    <div class="message-holder">
+      <div class="left-bubble">
+
+        <div class="chat-pic-2" [ngStyle]="{'background-image':'url(./assets/chat/2.jpg)'}">
+          
+        </div>
+
+        <div class="message">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quod consequuntur maxime inventore delectus corrupti cumque.
+          
+          <span class="hour-sent">3:00PM</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="message-holder">
+      <div class="left-bubble">
+
+        <div class="chat-pic-2" [ngStyle]="{'background-image':'url(./assets/chat/2.jpg)'}">
+          
+        </div>
+
+        <div class="message">
+          <!-- <img src="/assets/dog1.jpg" alt=""> -->
+          <div class="chat-picture" [ngStyle]="{'background-image':'url(./assets/dog1.jpg)'}">
+          </div>
+        </div>
+      <span class="hour-sent">3:00PM</span>
+      </div>
+    </div>
+
+    <div class="message-holder">
+      <div class="right-bubble">
+        Gracias!
+      <span class="hour-sent">3:00PM</span>
+      </div>
+    </div>
+
+    <div class="alert-pw">
+      
+      <ion-item>
+        
+        <div class="alert-img" slot="start">
+          <img src="assets/paseos/flag-1.svg" alt="">
+        </div>
+
+        <div class="alert-msg">
+          El paseo ha terminado a las 8:00
+        </div>
+
+      </ion-item>
+
+    </div>
+
+  </div>
+
+  <!-- <div class="padding" style="background-color: #fff; border: 1px solid silver;">
+    
+    <button [routerLink]="['check-reserve']" style="margin-bottom: 0;" class="btn-pw1">Confirmar fin del paseo y opinar</button>
+
+  </div> -->
+
+</ion-content>
+
+<ion-footer>
+  
+  <ion-item lines="none" style="padding: 8px 0;">
+    
+    <div slot="start" style="margin:16px;top:4px;position:relative;">
+      <ion-icon style="font-size: 24px;" class="color-pw" src="assets/link.svg"></ion-icon>
+    </div>
+
+    <div style="width: 100%">
+      <ion-input type="text"></ion-input>
+    </div>
+
+    <div slot="end" style="margin: 16px;">
+      <ion-icon style="font-size: 24px; position: relative; top: 2px;" class="color-pw" src="assets/send.svg"></ion-icon>
+    </div>
+
+  </ion-item>
+
+</ion-footer>

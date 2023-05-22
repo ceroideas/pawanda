@@ -1,0 +1,545 @@
+﻿<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 3
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 3</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Tab 3 page"></app-explore-container> -->
+
+  <div style="padding: 20px 40px; background-color: #fff; border-bottom: 1px solid silver;">
+    
+    <ion-row style="text-align: center; font-size: 14px;">
+      
+      <ion-col size="6" (click)="selected = 1">
+
+        <div class="selector-box" [ngClass]="{'selected-box': selected == 1}">
+          
+          <img [src]="'assets/paseos/paseo-'+( selected == 1 ? '1' : '2' )+'.svg'" alt="">
+
+        </div>
+
+        <span class="text" [ngClass]="{'selected-text': selected == 1}">Paseos reservados</span>
+
+      </ion-col>
+      <ion-col size="6" (click)="selected = 2">
+        
+        <div class="selector-box" [ngClass]="{'selected-box': selected == 2}">
+          
+          <img [src]="'assets/paseos/flag-'+( selected == 2 ? '1' : '2' )+'.svg'" alt="">
+
+        </div>
+
+        <span class="text" [ngClass]="{'selected-text': selected == 2}">Paseos terminados</span>
+      </ion-col>
+
+    </ion-row>
+
+
+  </div>
+
+  <div class="padding" *ngIf="selected == 1">
+    
+    <!-- <h5 class="color-pw wb" style="margin-bottom: 0;">Buscar paseadores</h5> -->
+
+    <!-- <div>
+
+      <br>
+
+      <div class="walk-find">
+
+        <ion-item lines="none" [routerLink]="['list']">
+          
+
+        <ion-row style="width: 100%;">
+          
+          <ion-col size="6">
+            
+            <span style="font-size: 12px;">
+              <ion-icon src="assets/walk/calendar.svg"></ion-icon> 12 ene de 2021
+            </span> <br>
+
+            <span style="font-size: 12px;">
+              <ion-icon src="assets/walk/clock.svg"></ion-icon> De 08:00 a 14:00 h
+            </span>
+
+          </ion-col>
+          <ion-col size="6">
+            <span style="font-size: 12px;">
+              <ion-icon src="assets/walk/repeat.svg"></ion-icon> Todos los lunes
+            </span> <br>
+
+            <br>
+
+            <span style="font-size: 12px;">
+              <ion-icon src="assets/walk/location.svg"></ion-icon> Calle Iriarte, 9
+            </span>
+            
+          </ion-col>
+
+        </ion-row>
+
+        <div slot="end">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+
+        </ion-item>
+        
+      </div>
+      
+    </div> -->
+
+    <div class="walkers-box">
+      
+      <!-- <ion-item lines="none">
+        <div slot="start" class="profile-pic" style="background-image: url(assets/chat/1.jpg);">
+        </div>
+
+        <div style="font-size: 14px;">
+          <span class="color-pw link">Ronald Richards</span> <br>
+
+          <span style="color: #000; display: block; margin-top: 10px;">600 000 000</span>
+        </div>
+
+        <div slot="end">
+          12 €
+        </div>
+      </ion-item> -->
+
+      <div class="mid-section" [routerLink]="['list']">
+        
+        <ion-row>
+          
+          <ion-col size="6">
+            
+            <span>
+              <ion-icon src="assets/walk/calendar.svg"></ion-icon> 12 ene de 2021
+            </span>
+
+            <span>
+              <ion-icon src="assets/walk/clock.svg"></ion-icon> De 08:00 a 14:00 h
+            </span>
+
+            <span>
+              <ion-icon src="assets/walk/repeat.svg"></ion-icon> Todos los lunes
+            </span>
+
+          </ion-col>
+          <ion-col size="6">
+
+            <br>
+
+            <span>
+              <ion-icon src="assets/walk/location.svg"></ion-icon> Calle Iriarte, 9
+            </span>
+
+            <span>
+              <ion-icon src="assets/walk/timer.svg"></ion-icon> Faltan 21 horas
+            </span>
+
+            
+          </ion-col>
+
+        </ion-row>
+
+      </div>
+
+      <!-- <div style="overflow: auto;" [ngStyle]="{'height': condition == 1 ? 'auto' : 0}">
+        <ion-row class="ion-no-margin">
+          
+          <ion-col>
+            <button class="btn-pw1">Escribir</button>
+          </ion-col>
+          <ion-col>
+            <button class="btn-pw3" [routerLink]="['cancel']">Eliminar paseo</button>
+          </ion-col>
+
+        </ion-row>
+      </div> -->
+
+    </div>
+
+    <div class="walkers-box">
+      
+      <ion-item lines="none">
+        <div slot="start" class="profile-pic" style="background-image: url(assets/chat/1.jpg);">
+        </div>
+
+        <div style="font-size: 14px;">
+          <span class="color-pw link">Ronald Richards</span> <br>
+
+          <span style="color: #000; display: block; margin-top: 10px;">600 000 000</span>
+        </div>
+
+        <div slot="end">
+          12 €
+        </div>
+      </ion-item>
+
+      <div class="mid-section">
+        
+        <ion-row>
+          
+          <ion-col size="6">
+            
+            <span>
+              <ion-icon src="assets/walk/calendar.svg"></ion-icon> 12 ene de 2021
+            </span>
+
+            <span>
+              <ion-icon src="assets/walk/clock.svg"></ion-icon> De 08:00 a 14:00 h
+            </span>
+
+            <span>
+              <ion-icon src="assets/walk/repeat.svg"></ion-icon> Todos los lunes
+            </span>
+
+          </ion-col>
+          <ion-col size="6">
+
+            <br>
+
+            <span>
+              <ion-icon src="assets/walk/location.svg"></ion-icon> Calle Iriarte, 9
+            </span>
+
+            <span>
+              <ion-icon src="assets/walk/timer.svg"></ion-icon> Faltan 21 horas
+            </span>
+
+            
+          </ion-col>
+
+        </ion-row>
+
+      </div>
+
+      <div style="overflow: auto;" [ngStyle]="{'height': condition == 1 ? 'auto' : 0}">
+        <ion-row class="ion-no-margin">
+          
+          <ion-col>
+            <button class="btn-pw1">Escribir</button>
+          </ion-col>
+          <ion-col>
+            <button class="btn-pw3" [routerLink]="['cancel']">Eliminar paseo</button>
+          </ion-col>
+
+        </ion-row>
+      </div>
+
+      <ion-item lines="none">
+        <div>
+          <ion-icon src="assets/walk/star.svg"></ion-icon>
+          <ion-icon src="assets/walk/star.svg"></ion-icon>
+          <ion-icon src="assets/walk/star.svg"></ion-icon>
+          <ion-icon src="assets/walk/star.svg"></ion-icon>
+          <ion-icon src="assets/walk/star-outline.svg"></ion-icon>
+        </div>
+
+        <div slot="end">
+          <ion-icon *ngIf="condition != 1" (click)="condition = 1" name="chevron-forward-outline" style="font-size: 20px;"></ion-icon>
+          <ion-icon *ngIf="condition == 1" (click)="condition = null" name="chevron-up-outline" style="font-size: 20px;"></ion-icon>
+        </div>
+      </ion-item>
+
+    </div>
+
+    <div class="walkers-box">
+      
+      <ion-item lines="none">
+        <div slot="start" class="profile-pic" style="background-image: url(assets/chat/1.jpg);">
+        </div>
+
+        <div style="font-size: 14px;">
+          <span class="color-pw link">Ronald Richards</span> <br>
+
+          <span style="color: #000; display: block; margin-top: 10px;">600 000 000</span>
+        </div>
+
+        <div slot="end">
+          12 €
+        </div>
+      </ion-item>
+
+      <div class="mid-section">
+        
+        <ion-row>
+          
+          <ion-col size="6">
+            
+            <span>
+              <ion-icon src="assets/walk/calendar.svg"></ion-icon> 12 ene de 2021
+            </span>
+
+            <span>
+              <ion-icon src="assets/walk/clock.svg"></ion-icon> De 08:00 a 14:00 h
+            </span>
+
+            <span>
+              <ion-icon src="assets/walk/repeat.svg"></ion-icon> Todos los lunes
+            </span>
+
+          </ion-col>
+          <ion-col size="6">
+
+            <br>
+
+            <span>
+              <ion-icon src="assets/walk/location.svg"></ion-icon> Calle Iriarte, 9
+            </span>
+
+            <span>
+              <ion-icon src="assets/walk/timer.svg"></ion-icon> Faltan 21 horas
+            </span>
+
+            
+          </ion-col>
+
+        </ion-row>
+
+      </div>
+
+      <div style="overflow: auto;" [ngStyle]="{'height': condition == 2 ? 'auto' : 0}">
+        <ion-row class="ion-no-margin">
+          
+          <ion-col>
+            <button class="btn-pw1">Escribir</button>
+          </ion-col>
+          <ion-col>
+            <button class="btn-pw3" [routerLink]="['cancel']">Eliminar paseo</button>
+          </ion-col>
+
+        </ion-row>
+      </div>
+
+      <ion-item lines="none">
+        <div>
+          <ion-icon src="assets/walk/star.svg"></ion-icon>
+          <ion-icon src="assets/walk/star.svg"></ion-icon>
+          <ion-icon src="assets/walk/star.svg"></ion-icon>
+          <ion-icon src="assets/walk/star.svg"></ion-icon>
+          <ion-icon src="assets/walk/star-outline.svg"></ion-icon>
+        </div>
+
+        <div slot="end">
+          <ion-icon *ngIf="condition != 2" (click)="condition = 2" name="chevron-forward-outline" style="font-size: 20px;"></ion-icon>
+          <ion-icon *ngIf="condition == 2" (click)="condition = null" name="chevron-up-outline" style="font-size: 20px;"></ion-icon>
+        </div>
+      </ion-item>
+
+    </div>
+
+  </div>
+
+  <div class="padding" *ngIf="selected == 2">
+    
+    <!-- <h5 class="color-pw wb" style="margin-bottom: 0;">Buscar paseadores</h5> -->
+
+    <div class="walkers-box">
+      
+      <ion-item lines="none">
+        <div slot="start" class="profile-pic" style="background-image: url(assets/chat/1.jpg);">
+        </div>
+
+        <div style="font-size: 14px;">
+          <span class="color-pw link">Ronald Richards</span> <br>
+
+          <span style="color: #000; display: block; margin-top: 10px;">600 000 000</span>
+        </div>
+
+        <div slot="end">
+          12 €
+        </div>
+      </ion-item>
+
+      <div class="mid-section">
+        
+        <ion-row>
+          
+          <ion-col size="6">
+            
+            <span>
+              <ion-icon src="assets/walk/calendar.svg"></ion-icon> 12 ene de 2021
+            </span>
+
+            <span>
+              <ion-icon src="assets/walk/clock.svg"></ion-icon> De 08:00 a 14:00 h
+            </span>
+
+          </ion-col>
+          <ion-col size="6">
+
+            <span>
+              <ion-icon src="assets/walk/repeat.svg"></ion-icon> Todos los lunes
+            </span>
+
+            <span>
+              <ion-icon src="assets/walk/location.svg"></ion-icon> Calle Iriarte, 9
+            </span>
+
+            <!-- <span>
+              <ion-icon src="assets/walk/timer.svg"></ion-icon> Faltan 21 horas
+            </span> -->
+
+            
+          </ion-col>
+
+        </ion-row>
+
+      </div>
+
+      <div style="overflow: auto;" [ngStyle]="{'height': condition == 3 ? 'auto' : 0}">
+
+        <b>Fotos del paseo</b>
+        <ion-row class="ion-no-margin">
+          
+          <ion-col>
+            <div class="walk-pic" [ngStyle]="{'background-image': 'url(assets/walk/1.jpg)'}"></div>
+          </ion-col>
+          <ion-col>
+            <div class="walk-pic" [ngStyle]="{'background-image': 'url(assets/walk/2.jpg)'}"></div>
+          </ion-col>
+          <ion-col>
+            <div class="walk-pic" [ngStyle]="{'background-image': 'url(assets/walk/3.jpg)'}"></div>
+          </ion-col>
+
+          <ion-col size="12">
+
+            <br>
+            
+            <button class="btn-pw1">Contactar de nuevo</button>
+
+          </ion-col>
+
+        </ion-row>
+      </div>
+
+      <ion-item lines="none">
+        <div class="color-pw link" [routerLink]="['punctuation']">
+          Escribir opinión
+        </div>
+
+        <div slot="end">
+          <ion-icon *ngIf="condition != 3" (click)="condition = 3" name="chevron-forward-outline" style="font-size: 20px;"></ion-icon>
+          <ion-icon *ngIf="condition == 3" (click)="condition = null" name="chevron-up-outline" style="font-size: 20px;"></ion-icon>
+        </div>
+      </ion-item>
+
+    </div>
+
+    <div class="walkers-box">
+      
+      <ion-item lines="none">
+        <div slot="start" class="profile-pic" style="background-image: url(assets/chat/1.jpg);">
+        </div>
+
+        <div style="font-size: 14px;">
+          <span class="color-pw link">Ronald Richards</span> <br>
+
+          <span style="color: #000; display: block; margin-top: 10px;">600 000 000</span>
+        </div>
+
+        <div slot="end">
+          12 €
+        </div>
+      </ion-item>
+
+      <div class="mid-section">
+        
+        <ion-row>
+          
+          <ion-col size="6">
+            
+            <span>
+              <ion-icon src="assets/walk/calendar.svg"></ion-icon> 12 ene de 2021
+            </span>
+
+            <!-- <span>
+              <ion-icon src="assets/walk/clock.svg"></ion-icon> De 08:00 a 14:00 h
+            </span>
+
+            <span>
+              <ion-icon src="assets/walk/repeat.svg"></ion-icon> Todos los lunes
+            </span> -->
+
+          </ion-col>
+          <ion-col size="6">
+
+            <br>
+
+            <!-- <span>
+              <ion-icon src="assets/walk/location.svg"></ion-icon> Calle Iriarte, 9
+            </span>
+
+            <span>
+              <ion-icon src="assets/walk/timer.svg"></ion-icon> Faltan 21 horas
+            </span> -->
+
+            
+          </ion-col>
+
+        </ion-row>
+
+      </div>
+
+      <div style="overflow: auto;" [ngStyle]="{'height': condition == 4 ? 'auto' : 0}">
+
+        <b>Fotos del paseo</b>
+        <ion-row class="ion-no-margin">
+          
+          <ion-col>
+            <div class="walk-pic" [ngStyle]="{'background-image': 'url(assets/walk/1.jpg)'}"></div>
+          </ion-col>
+          <ion-col>
+            <div class="walk-pic" [ngStyle]="{'background-image': 'url(assets/walk/2.jpg)'}"></div>
+          </ion-col>
+          <ion-col>
+            <div class="walk-pic" [ngStyle]="{'background-image': 'url(assets/walk/3.jpg)'}"></div>
+          </ion-col>
+
+          <ion-col size="12">
+
+            <br>
+            
+            <button class="btn-pw1">Contactar de nuevo</button>
+
+          </ion-col>
+
+        </ion-row>
+      </div>
+
+      <ion-item lines="none">
+        <div>
+          <ion-icon src="assets/walk/star.svg"></ion-icon>
+          <ion-icon src="assets/walk/star.svg"></ion-icon>
+          <ion-icon src="assets/walk/star.svg"></ion-icon>
+          <ion-icon src="assets/walk/star.svg"></ion-icon>
+          <ion-icon src="assets/walk/star-outline.svg"></ion-icon>
+        </div>
+
+        <div slot="end">
+          <ion-icon *ngIf="condition != 4" (click)="condition = 4" name="chevron-forward-outline" style="font-size: 20px;"></ion-icon>
+          <ion-icon *ngIf="condition == 4" (click)="condition = null" name="chevron-up-outline" style="font-size: 20px;"></ion-icon>
+        </div>
+      </ion-item>
+
+    </div>
+
+  </div>
+</ion-content>
+
+<ion-footer>
+  <div class="padding">
+  <button class="btn-pw1">Reservar otro paseo</button>
+  </div>
+
+</ion-footer>
