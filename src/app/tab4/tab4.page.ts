@@ -13,8 +13,11 @@ export class Tab4Page implements OnInit {
 
   constructor(public nav: NavController, public alertCtrl: AlertController, private profileSvc: ProfileService) { }
 
- async ngOnInit() {
-    (await this.profileSvc.getProfile()).subscribe((res) => {this.userData = res;})
+  ngOnInit() {
+
+    this.setData()
+    
+    
   }
 
   logout()
@@ -32,6 +35,11 @@ export class Tab4Page implements OnInit {
   enterAsWalker()
   {
     this.nav.navigateRoot('/walker');
+  }
+
+ async setData(){
+     (await this.profileSvc.getProfile()).subscribe((res) => {this.userData = res;})
+      console.log('console')
   }
 
 }

@@ -25,6 +25,10 @@ export class DogService {
     return await this.http.get(`${this.url}/api/dogs/me`, this.options);
   }
 
+  async deleteDog(id: number) {
+    return await this.http.delete(`${this.url}/api/dogs/${id}`, this.options);
+  }
+
   async getRaces() {
     return await this.http.get('https://api.thedogapi.com/v1/breeds');
   }
