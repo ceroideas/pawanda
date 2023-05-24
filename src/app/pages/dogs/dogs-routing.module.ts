@@ -15,7 +15,11 @@ const routes: Routes = [
   {
     path: 'delete',
     loadChildren: () => import('./delete/delete.module').then( m => m.DeletePageModule)
+  },  {
+    path: 'edit',
+    loadChildren: () => import('./edit/edit.module').then( m => m.EditPageModule)
   }
+
 ];
 
 @NgModule({

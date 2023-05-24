@@ -55,6 +55,8 @@
           <ion-icon
             class="color-pw"
             style="margin-left: 12px"
+            [routerLink]="['edit']"
+            [queryParams]="{ id: dog.id }"
             src="assets/edit.svg"
           ></ion-icon>
           <ion-icon

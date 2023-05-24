@@ -25,6 +25,18 @@ export class DogService {
     return await this.http.get(`${this.url}/api/dogs/me`, this.options);
   }
 
+  async getDog(id: number) {
+    return await this.http.get(`${this.url}/api/dogs/${id}`, this.options);
+  }
+
+  async updateDog(id: number, dog: any) {
+    return await this.http.patch(
+      `${this.url}/api/dogs/${id}`,
+      dog,
+      this.options
+    );
+  }
+
   async deleteDog(id: number) {
     return await this.http.delete(`${this.url}/api/dogs/${id}`, this.options);
   }
