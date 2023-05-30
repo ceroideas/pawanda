@@ -26,6 +26,7 @@ export class MapPage implements OnInit {
   constructor(public geolocation: Geolocation, public nav: NavController) { }
 
   ngOnInit() {
+    console.log('nddno')
     this.geolocation.getCurrentPosition().then((resp) => {
      this.lat = resp.coords.latitude;
      this.lon = resp.coords.longitude;
@@ -114,6 +115,8 @@ export class MapPage implements OnInit {
 
   next()
   {
+    localStorage.setItem('latlng',JSON.stringify(this.latlng));
+    localStorage.setItem('address',this.address);
     this.nav.navigateForward('tabs/tab1/date');
   }
 

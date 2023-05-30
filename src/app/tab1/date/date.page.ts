@@ -17,6 +17,9 @@ export class DatePage implements OnInit {
 
   days = [];
 
+  hour_from;
+  hour_to;
+
   hours = [
 
     "00:00",
@@ -58,7 +61,7 @@ export class DatePage implements OnInit {
     currentDate: new Date(),
   };
 
-  selectedDate: Date;
+  // selectedDate: Date;
   fechasNull = [];
 
   dates = [];
@@ -136,6 +139,15 @@ export class DatePage implements OnInit {
 
   next()
   {
+    localStorage.setItem('days',JSON.stringify(this.days));
+    localStorage.setItem('fechasNull',JSON.stringify(this.fechasNull));
+    // localStorage.setItem('selectedDate',this.selectedDate.toString());
+    localStorage.setItem('dates',JSON.stringify(this.dates));
+    localStorage.setItem('hour_from',JSON.stringify(this.hour_from));
+    localStorage.setItem('hour_to',JSON.stringify(this.hour_to));
+    localStorage.setItem('repeat',this.repeat);
+    localStorage.setItem('repeat_to',this.repeat_to);
+    localStorage.setItem('repeat_to_date',this.repeat_to_date);
     this.nav.navigateForward('tabs/tab1/walkers');
   }
 

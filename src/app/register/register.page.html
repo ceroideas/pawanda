@@ -5,110 +5,160 @@
 </ion-header> -->
 
 <ion-content>
-
   <div class="padding">
-    
-    <h5 class="color-pw wb" style="margin-bottom: 0;" (click)="nav.back()">
-      <ion-icon src="assets/arrow-left.svg" style="position: relative; top: 3px; font-size: 20px;"></ion-icon>
-    Registro</h5>
+    <h5 class="color-pw wb" style="margin-bottom: 0" (click)="nav.back()">
+      <ion-icon
+        src="assets/arrow-left.svg"
+        style="position: relative; top: 3px; font-size: 20px"
+      ></ion-icon>
+      Registro
+    </h5>
 
-    <form class="form" [formGroup]="validations_form" (ngSubmit)="registerUser(validations_form.value)">
-      
-    <ion-list>
-
+    <form
+      class="form"
+      [formGroup]="validations_form"
+      (ngSubmit)="registerUser(validations_form.value)"
+    >
+      <ion-list>
         <ion-item class="ion-no-padding" lines="none">
-          <ion-label position="stacked"> <span class="control-label">Nombre</span> <br> <br> <br> </ion-label>
-          <ion-input formControlName="name" type="text" ></ion-input>
-
+          <ion-label position="stacked">
+            <span class="control-label">Nombre</span> <br />
+            <br />
+            <br />
+          </ion-label>
+          <ion-input formControlName="name" type="text"></ion-input>
         </ion-item>
-          <div class="validation-errors">
-                  <ng-container *ngFor="let validation of validation_messages.name">
-                    <div class="error-message" *ngIf="validations_form.get('name').hasError(validation.type) && (validations_form.get('name').dirty || validations_form.get('name').touched)">
-                      {{ validation.message }}
-                    </div>
-                  </ng-container>
-                </div>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.name">
+            <div
+              class="error-message"
+              *ngIf="validations_form.get('name').hasError(validation.type) && (validations_form.get('name').dirty || validations_form.get('name').touched)"
+            >
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
 
         <ion-item class="ion-no-padding" lines="none">
-          <ion-label position="stacked"> <span class="control-label">Email</span> <br> <br> <br> </ion-label>
-          <ion-input placeholder="manolito@gmail.com" formControlName="email" type="email" ></ion-input>
-
+          <ion-label position="stacked">
+            <span class="control-label">Email</span> <br />
+            <br />
+            <br />
+          </ion-label>
+          <ion-input
+            placeholder="manolito@gmail.com"
+            formControlName="email"
+            type="email"
+          ></ion-input>
         </ion-item>
-          <div class="validation-errors">
-                  <ng-container *ngFor="let validation of validation_messages.email">
-                    <div class="error-message" *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
-                      {{ validation.message }}
-                    </div>
-                  </ng-container>
-                </div>
-
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.email">
+            <div
+              class="error-message"
+              *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)"
+            >
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
 
         <ion-item class="ion-no-padding" lines="none">
-          <ion-label position="stacked"> <span class="control-label">Contraseña</span> <br> <br> <br> </ion-label>
-          <ion-input formControlName="password" [type]="type" ></ion-input>
-          <img (click)="changeType()" src="assets/eye.svg" alt="" style="
+          <ion-label position="stacked">
+            <span class="control-label">Contraseña</span> <br />
+            <br />
+            <br />
+          </ion-label>
+          <ion-input formControlName="password" [type]="type"></ion-input>
+          <img
+            (click)="changeType()"
+            src="assets/eye.svg"
+            alt=""
+            style="
               position: absolute;
               right: 12px;
               bottom: 15px;
               z-index: 10;
               width: 30px;
-          ">
-
+            "
+          />
         </ion-item>
-          <div class="validation-errors">
-                  <ng-container *ngFor="let validation of validation_messages.password">
-                    <div class="error-message" *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
-                      {{ validation.message }}
-                    </div>
-                  </ng-container>
-                </div>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.password">
+            <div
+              class="error-message"
+              *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)"
+            >
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
 
-        <div style="padding: 8px 0; color: gray; font-size: 16px;">
+        <div style="padding: 8px 0; color: gray; font-size: 16px">
+
           Debe tener más de 7 caracteres y un número
         </div>
 
         <ion-item class="ion-no-padding" lines="none">
-          <ion-label position="stacked"> <span class="control-label">Móvil</span> <br> <br> <br> </ion-label>
-          <ion-input formControlName="phone" type="phone" ></ion-input>
-
+          <ion-label position="stacked">
+            <span class="control-label">Móvil</span> <br />
+            <br />
+            <br />
+          </ion-label>
+          <ion-input formControlName="phone" type="phone"></ion-input>
         </ion-item>
-          <div class="validation-errors">
-                  <ng-container *ngFor="let validation of validation_messages.phone">
-                    <div class="error-message" *ngIf="validations_form.get('phone').hasError(validation.type) && (validations_form.get('phone').dirty || validations_form.get('phone').touched)">
-                      {{ validation.message }}
-                    </div>
-                  </ng-container>
-                </div>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.phone">
+            <div
+              class="error-message"
+              *ngIf="validations_form.get('phone').hasError(validation.type) && (validations_form.get('phone').dirty || validations_form.get('phone').touched)"
+            >
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
 
-        <div style="padding: 8px 0; color: gray; font-size: 16px;">
+        <div style="padding: 8px 0; color: gray; font-size: 16px">
           Sólo lo verán los usuarios con los que reserves un paseo
         </div>
 
-
-        <br>
+        <br />
 
         <ion-item lines="none">
-          <ion-checkbox value="1" formControlName="policy" slot="start" style="    --border-radius: 50px"></ion-checkbox>
+          <ion-checkbox
+            value="1"
+            formControlName="policy"
+            slot="start"
+            style="--border-radius: 50px"
+          ></ion-checkbox>
 
-          <ion-label> Acepto la <a href="https://#" target="_blank">politica de gestión de datos</a></ion-label>
+          <ion-label>
+            Acepto la
+            <a href="https://#" target="_blank"
+              >politica de gestión de datos</a
+            ></ion-label
+          >
         </ion-item>
-          <div class="validation-errors">
-                  <ng-container *ngFor="let validation of validation_messages.policy">
-                    <div class="error-message" *ngIf="validations_form.get('policy').hasError(validation.type) && (validations_form.get('policy').dirty || validations_form.get('policy').touched)">
-                      {{ validation.message }}
-                    </div>
-                  </ng-container>
-                </div>
+        <div class="validation-errors">
+          <ng-container *ngFor="let validation of validation_messages.policy">
+            <div
+              class="error-message"
+              *ngIf="validations_form.get('policy').hasError(validation.type) && (validations_form.get('policy').dirty || validations_form.get('policy').touched)"
+            >
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
 
-        <br>
+        <br />
 
-        <button class="btn-pw1" [disabled]="!validations_form.valid" routerLink="/tabs">Registrarme</button>
-
-
+        <button
+          type="submit"
+          class="btn-pw1"
+          [disabled]="!validations_form.valid"
+        >
+          Registrarme
+        </button>
       </ion-list>
-
     </form>
-
   </div>
-
 </ion-content>

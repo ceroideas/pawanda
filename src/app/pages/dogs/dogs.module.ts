@@ -9,12 +9,7 @@ import { DogsPageRoutingModule } from './dogs-routing.module';
 import { DogsPage } from './dogs.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    DogsPageRoutingModule
-  ],
-  declarations: [DogsPage]
+  imports: [CommonModule, FormsModule, IonicModule, DogsPageRoutingModule],
+  declarations: [DogsPage],
 })
 export class DogsPageModule {}

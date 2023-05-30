@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { NavController } from '@ionic/angular';
+import { NavController, ToastController } from '@ionic/angular';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginPage implements OnInit {
   type = 'password';
   role;
 
-  constructor(private formBuilder: FormBuilder, private route: ActivatedRoute, private nav: NavController) {
+  constructor(private formBuilder: FormBuilder, private route: ActivatedRoute, private nav: NavController,private authSvc: AuthService, public toast: ToastController) {
     this.role = this.route.snapshot.paramMap.get('id');
   }
 
@@ -55,12 +56,32 @@ export class LoginPage implements OnInit {
     }
   }
 
-  loginUser(value)
+ async loginUser(value)
   {
-    if (this.role == 1) {
-      this.nav.navigateRoot('walker');
-    }else{
-      this.nav.navigateRoot('tabs');
-    }
+    const login = (await this.authSvc.login(value)).subscribe((res:any) => {
+
+      this.toast.dismiss();
+      
+      localStorage.setItem('token', res.token);
+      console.log(res);
+
+      if (this.role == 1) {
+        this.nav.navigateRoot('walker');
+      }else{
+        this.nav.navigateRoot('tabs');
+      }
+    },err=>{
+      this.toast.dismiss();
+      this.toast
+        .create({
+          message: 'Usuario o contraseña incorrecta',
+          cssClass: 'pw-toast-err',
+          icon: 'bug-outline',
+          buttons: [{ icon: 'close', role: 'cancel' }],
+        })
+        .then((t) => {
+          t.present();
+        });
+    })
   }
 }

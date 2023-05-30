@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, AlertController } from '@ionic/angular';
+import { ProfileService } from '../services/profile.service';
 
 @Component({
   selector: 'app-tab4',
@@ -8,9 +9,14 @@ import { NavController, AlertController } from '@ionic/angular';
 })
 export class Tab4Page implements OnInit {
 
-  constructor(public nav: NavController, public alertCtrl: AlertController) { }
+  userData!:any;
+
+  constructor(public nav: NavController, public alertCtrl: AlertController, private profileSvc: ProfileService) { }
 
   ngOnInit() {
+
+    this.setData()
+    
   }
 
   logout()
@@ -18,6 +24,7 @@ export class Tab4Page implements OnInit {
     this.alertCtrl.create({message: "¿Quiere cerrar sesión?", buttons: [{
       text:"Si",
       handler: ()=>{
+        localStorage.removeItem('token');
         this.nav.navigateRoot('start');
       }
     },{
@@ -30,4 +37,8 @@ export class Tab4Page implements OnInit {
     this.nav.navigateRoot('/walker');
   }
 
+ async setData(){
+     (await this.profileSvc.getProfile()).subscribe((res) => {this.userData = res;})
+      console.log('console')
+  }
 }

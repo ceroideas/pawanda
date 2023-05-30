@@ -29,7 +29,9 @@
       </div>
 
       <div>
-        <h4>Cristina Alonso <br> <small>debbie.baker@example.com</small></h4>
+        
+        <h4>{{userData?.name}}<br> <small>{{userData?.email}}</small> <br> <small>v 0.0.1</small></h4>
+        
       </div>
 
     </ion-item>
@@ -102,6 +104,19 @@
 
         <div>
           <span>Eliminar cuenta</span>
+        </div>
+      </ion-item>
+
+      <div class="line"></div>
+      <br>
+
+      <ion-item lines="none" style="padding: 8px 0;">
+        <div class="profile-img" slot="start" style="margin-right: 20px;">
+          <img src="assets/profile/paw.svg" alt="" style="width: 30px;">
+        </div>
+
+        <div>
+          <span>Nuestro código ético</span>
         </div>
       </ion-item>
 

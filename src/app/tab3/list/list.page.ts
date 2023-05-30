@@ -24,7 +24,7 @@ export class ListPage implements OnInit {
       this.initMap();
       // this.geocodeLatLng();
 
-    },10)
+    },100)
   }
 
   changeList()
